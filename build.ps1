@@ -1,1 +1,1 @@
-ng build --output-path docs --base-href "https://github.com/anh0701/anh0701.github.io" --configuration production
+ng build --output-path docs --base-href "https://anh0701.github.io/" --configuration production
