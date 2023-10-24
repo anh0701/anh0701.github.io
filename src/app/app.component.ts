@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
     let count = 0;
     const id = setInterval(() => {
       if (this.message.length === message.length) {
-        clearInterval(id);
+        clearInterval(id); 
       }
       this.message += message.charAt(count);
       count += 1;

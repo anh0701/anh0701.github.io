@@ -45,3 +45,22 @@
         opacity: 0;
    }
 }
+a{
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+a::after{
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transform: 0.3s;
+}
+
+a:hover::after{
+    width: 100%;
+}
