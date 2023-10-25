@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
-const message = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vel numquam facere qui dicta veniam sapiente hic laudantium quod similique, ad facilis quisquam officia repudiandae! Possimus doloribus dicta autem exercitationem?"
+const message = "Hello! Welcome to my page."
 
 @Component({
   selector: 'app-root',
