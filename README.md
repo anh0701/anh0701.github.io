@@ -4,4 +4,7 @@
     ```sh
         ng serve --open
     ```
-
+2. Generate component
+    ```sh
+        ng generate c [name]
+    ```
