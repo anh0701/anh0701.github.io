@@ -20,9 +20,9 @@
 .demo::after {
     content: '';
     position: absolute;
-    width: 1ch;
+    width: 0.3ch;
     height: 1.5rem;
-    background-color: #fff;
+    background-color: #ffff;
     transform: translate(0.5ch, 2px);
     animation: caret 0.875s ease-in forwards infinite;
 }
