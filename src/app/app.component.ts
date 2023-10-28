@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
-const message = "Hello! Welcome to my page."
+const message = "Welcome to my page."
 
 @Component({
   selector: 'app-root',
