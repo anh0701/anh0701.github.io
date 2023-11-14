@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutMePageComponent } from './about-me-page/about-me-page.component';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AboutMePageComponent } from './about-me-page/about-me-page.component';
     MenuComponent,
     ContactPageComponent,
     HomePageComponent,
-    AboutMePageComponent
+    AboutMePageComponent,
+    SlideshowComponent
   ],
   imports: [
     BrowserModule,
