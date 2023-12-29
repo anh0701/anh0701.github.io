@@ -1,25 +1,25 @@
-<nav class="navbar navbar-expand-sm nav-fix">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar fixed-top navbar-expand-sm nav-fix">
+    <button (click) = "check()" class="navbar-toggler" type="button" data-bs-toggle ="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div [hidden]="isCollapse" class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/">Home</a>
+          <a class="nav-link" routerLink="/" (click)="isCollapse = true;">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about-me">About me</a>
+          <a class="nav-link" routerLink="/about-me" (click)="isCollapse = true">About me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/blogs">Blogs</a>
+          <a class="nav-link" routerLink="/blogs" (click)="isCollapse = true">Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact">Contact</a>
+          <a class="nav-link" routerLink="/contact" (click)="isCollapse = true">Contact</a>
         </li>
       </ul>
       <ul class="nav navbar-nav ms-auto">
         <li class="navbar-brand">
-          <button class="btn btn-default btn-circle btn-lg p-3 d-flex align-items-center" id="btnSwitch">
+          <button (click)="isCollapse = true" class="btn btn-default btn-circle btn-lg p-3 d-flex align-items-center" id="btnSwitch">
               <i class="bi bi-moon-fill" id="sun"></i>
           </button>
         </li>
