@@ -8,3 +8,7 @@
     ```sh
         ng generate c [name]
     ```
+3. install package
+    ```sh
+        npm i --force
+    ```
