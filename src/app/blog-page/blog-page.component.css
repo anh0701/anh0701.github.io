@@ -1,18 +1,10 @@
 
-/* Fake image */
-.fakeimg {
-    background-color: #aaa;
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    background: url('../../assets/images/blog-laravel-repo.png');
-  }
   
 /* Add a card effect for articles */
 .card {
     /* background-color: white; */
     padding: 20px;
-    margin-top: 9%;
+    margin-top: 3%;
     margin-left: 3%;
     margin-right: 3%;
   }
