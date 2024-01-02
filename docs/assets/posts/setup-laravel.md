@@ -33,9 +33,13 @@
         width: 100%;
     }
 
-    table{
-        margin-inline-start: 10vw;
-        margin-block: 8vh;
+    @media all and (min-width: 600px) {
+
+        table{
+            margin-inline-start: 10vw;
+            margin-block: 8vh;
+        }
+
     }
 
     th{
