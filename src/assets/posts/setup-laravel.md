@@ -33,7 +33,7 @@
         width: 100%;
     }
 
-    @media all and (min-width: 600px) {
+    @media only screen and (min-width: 600px) {
 
         table{
             margin-inline-start: 10vw;
