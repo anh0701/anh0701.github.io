@@ -1,4 +1,4 @@
-# `Git Quick Start`
+<h2 style="text-align: center; color: #e685b5; margin-bottom:3%;">Git Quick Start</h2>
 
 1. Git vs Github, Gitlab
 
