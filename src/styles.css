@@ -2,11 +2,13 @@
 :root {
     --dark-bg-color: #1a1a1a;
     --dark-text-color: #f2f2f2;
+    --dark-icon-github: #ffff;
 }
 
 [data-bs-theme="light"] {
     --dark-bg-color: #ffff;
     --dark-text-color: #1a1a1a;
     --dark-text-color-menu: #ffff;
+    --dark-icon-github: #1a1a1a;
 }
   
