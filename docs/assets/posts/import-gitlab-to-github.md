@@ -7,3 +7,6 @@
     ```git remote add github URL-repo-github;```
 
     `git push --mirror github`
+
+    > See more:
+    - [Git Quick Start](/blogs/post/git-basic)
