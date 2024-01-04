@@ -56,3 +56,15 @@ a {
 .title {
   color: grey;
 }
+
+.container{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+}
+
+/* @media only screen and (max-width: 600px){
+  .container{
+    margin-top: 80%;
+  }
+} */
