@@ -10,6 +10,10 @@
     color: #fff;
 }
 
+button{
+    border: none;
+}
+
 a{
     position: relative;
     letter-spacing: 0.5px;
@@ -42,6 +46,18 @@ a:hover::before{
    a::before{
         width: 20%;
    }
+}
+
+@media screen and (max-width: 992px) {
+
+    button{
+        padding-bottom: 10px;
+        padding-top: 10px ;
+    }
+
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
