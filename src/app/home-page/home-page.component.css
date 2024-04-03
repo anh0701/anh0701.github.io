@@ -50,7 +50,7 @@
      height: 100%;
  }
  section{
-     position: absolute;
+     position: fixed;
      top: 0;
      left: 0;
      width: 100vw;
@@ -88,7 +88,7 @@
      position: absolute;
      top: 50%;
      transform: translateY(-50%);
-     width: 300px;
+     width: 200px;
      height: 1px;
      background: linear-gradient(90deg,#fff,transparent);
  }
@@ -167,7 +167,7 @@
  }
  span:nth-child(9){
      top: 0px;
-     right: 1000px;
+     right: 100px;
      left: initial;
      animation-delay: 0.75s;
      animation-duration: 2.25s;
@@ -179,3 +179,7 @@
      animation-delay: 2.75s;
      animation-duration: 2.75s;
  } 
+
+ .blog{
+    margin-top: 100vh;
+ }

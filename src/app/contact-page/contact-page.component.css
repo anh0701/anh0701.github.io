@@ -75,3 +75,21 @@ a {
     display: block;
   }
 }
+/* ------------------------------ */
+
+.card {
+  /* background-color: white; */
+  padding: 20px;
+  margin-top: 3%;
+  height: 100vh;
+}
+
+.col-sm{
+  margin-right: 1%;
+
+}
+
+.row{
+  margin-left: 3%;
+  margin-right: 3%;
+}
