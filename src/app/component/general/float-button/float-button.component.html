@@ -1,0 +1,38 @@
+<!-- oscuratore -->
+<div class="dialog_scrim" *ngIf="openMenu">
+</div>
+
+<button type="button" color="accent" (click)="clickMenu()" class="menu-button btn btn-primary rounded-circle btn-lg"
+  [class.mat-elevation-z2]="!isOver" [class.mat-elevation-z8]="isOver" (mouseover)="isOver = true"
+  (mouseleave)="isOver = false">
+  <i class="bi bi-list" *ngIf="!openMenu"></i>
+  <i class="bi bi-x-lg" *ngIf="openMenu"></i>
+</button>
+
+<button class="btnSwitch action-button one mat-elevation-z8 btn btn-primary rounded-circle btn-lg"
+  *ngIf="openMenu" color="basic" (click)="darkMode()">
+  <i class="icon bi bi-moon-fill" id="sun"></i>
+</button>
+
+<button  
+  class="btnSwitch label labelone mat-elevation-z8 btn btn-primary btn-sm" 
+  *ngIf="openMenu"
+  color="basic" 
+  (click)="darkMode()">
+  Dark/Night Mode
+</button>
+
+
+<!-- menu button -->
+<button id="myBtn" class="action-button two mat-elevation-z8 btn btn-primary rounded-circle btn-lg" *ngIf="openMenu"
+  color="basic" (click)="goToTop()">
+  <i class="bi bi-caret-up"></i>
+</button>
+
+<button 
+  class="label labeltwo mat-elevation-z8 btn btn-primary btn-sm" 
+  *ngIf="openMenu"
+  color="basic" 
+  (click)="goToTop()" >
+  To Top
+</button>

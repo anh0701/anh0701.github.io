@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactPageComponent } from './contact-page/contact-page.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { AboutMePageComponent } from './about-me-page/about-me-page.component';
-import { BlogPageComponent } from './blog-page/blog-page.component';
-import { PostsComponent } from './blog-page/posts/posts.component';
+import { HomeComponent } from './component/home/home.component';
+import { ContactComponent } from './component/home/contact/contact.component';
+import { BlogComponent } from './component/home/blog/blog.component';
+import { PostsComponent } from './component/home/blog/posts/posts.component';
+import { AboutComponent } from './component/home/about/about.component';
 
 const routes: Routes = [
-  {path: 'contact', component: ContactPageComponent },
-  {path:'', component: HomePageComponent},
-  {path:'about-me', component: AboutMePageComponent},
-  {path:'blogs', component: BlogPageComponent},
+  {path: 'contact', component: ContactComponent },
+  {path:'', component: HomeComponent},
+  {path:'about-me', component: AboutComponent},
+  {path:'blogs', component: BlogComponent},
   {path:'blogs/post/:article', component: PostsComponent}
 ];
 

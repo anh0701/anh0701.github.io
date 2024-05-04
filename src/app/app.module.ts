@@ -3,28 +3,32 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { ContactPageComponent } from './contact-page/contact-page.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { AboutMePageComponent } from './about-me-page/about-me-page.component';
-import { SlideshowComponent } from './slideshow/slideshow.component';
 import { SecurityContext } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown'; 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { BlogPageComponent } from './blog-page/blog-page.component';
-import { PostsComponent } from './blog-page/posts/posts.component';
-import { FloatButtonComponent } from './float-button/float-button.component';
+import { FooterComponent } from './component/general/footer/footer.component';
+import { HeaderComponent } from './component/general/header/header.component';
+import { HomeComponent } from './component/home/home.component';
+import { AboutComponent } from './component/home/about/about.component';
+import { BlogComponent } from './component/home/blog/blog.component';
+import { ContactComponent } from './component/home/contact/contact.component';
+import { MenuComponent } from './component/general/menu/menu.component';
+import { SlideshowComponent } from './component/general/slideshow/slideshow.component';
+import { FloatButtonComponent } from './component/general/float-button/float-button.component';
+import { PostsComponent } from './component/home/blog/posts/posts.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    ContactPageComponent,
-    HomePageComponent,
-    AboutMePageComponent,
     SlideshowComponent,
-    BlogPageComponent,
     PostsComponent,
-    FloatButtonComponent
+    FloatButtonComponent,
+    FooterComponent,
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    BlogComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
