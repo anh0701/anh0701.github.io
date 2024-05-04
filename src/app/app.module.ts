@@ -13,6 +13,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { PostsComponent } from './blog-page/posts/posts.component';
+import { FloatButtonComponent } from './float-button/float-button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { PostsComponent } from './blog-page/posts/posts.component';
     AboutMePageComponent,
     SlideshowComponent,
     BlogPageComponent,
-    PostsComponent
+    PostsComponent,
+    FloatButtonComponent
   ],
   imports: [
     BrowserModule,
