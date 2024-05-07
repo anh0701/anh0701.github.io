@@ -13,10 +13,14 @@ export class FloatButtonComponent {
     this.openMenu = !this.openMenu;
     // When the user scrolls down 20px from the top of the document, show the button
 
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("myBtn")!.style.display = "block";
-    } else {
-      document.getElementById("myBtn")!.style.display = "none";
+    const myBtn = document.getElementById("myBtn");
+    if (myBtn !== null) {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myBtn.style.display = "block";
+      } else {
+        myBtn.style.display = "none";
+      }
+
     }
   }
 
@@ -34,23 +38,25 @@ export class FloatButtonComponent {
   }
 
   darkMode() {
-    
-    var elements = document.getElementsByClassName("btnSwitch");
-    for (var i = 0; i < elements.length; i++)
-    elements[i].addEventListener('click', () => {
-      if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
-        document.documentElement.setAttribute('data-bs-theme', 'light')
-        document.getElementById('sun')!.classList.add('bi-sun')
-        document.getElementById('sun')!.classList.remove('bi-moon-fill')
-      }
-      else {
-        document.documentElement.setAttribute('data-bs-theme', 'dark')
-        document.getElementById('sun')!.classList.remove('bi-sun')
-        document.getElementById('sun')!.classList.add('bi-moon-fill')
 
-      }
-    })
+    var elements = document.getElementsByClassName("btnSwitch");
+    var elementSun = document.getElementById('sun');
+    for (var i = 0; i < elements.length; i++)
+      elements[i].addEventListener('click', () => {
+        if (elementSun !== null) {
+          if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+            document.documentElement.setAttribute('data-bs-theme', 'light')
+            elementSun.classList.add('bi-sun')
+            elementSun.classList.remove('bi-moon-fill')
+          }
+          else {
+            document.documentElement.setAttribute('data-bs-theme', 'dark')
+            elementSun.classList.remove('bi-sun')
+            elementSun.classList.add('bi-moon-fill')
+          }
+        }
+      })
   }
-  
+
 }
 
