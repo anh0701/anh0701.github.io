@@ -1,27 +1,33 @@
-.column {
-    /* float: left; */
-    width: 80%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-}
 
-/* .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-    margin-top: 3%;
-} */
+hr{
+  font-size: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #fff, #000, #fff);
+  height: 1px;
+  border: none;
+  margin: 2rem 10rem 0 10rem;
+}
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  /* max-width: 300px; */
-  margin: auto;
-  text-align: center;
   font-family: arial;
-  margin-top: 3%;
+  width: 95%;
+  margin: 2% 2%;
+  box-sizing: content-box !important;
 }
 
 .title {
     color: grey;
+}
+
+.box-me{
+  border-radius: 10px;
+  background-color: #cbcbcb;
+  margin-bottom: 1%;
 }
 
 .button {
@@ -56,4 +62,13 @@
   }
   a:hover {
     opacity: 0.7;
+  }
+
+  .col-sm{
+    margin-right: 1%;
+
+  }
+  .row{
+    margin-left: 3%;
+    margin-right: 3%;
   }
