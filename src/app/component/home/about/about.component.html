@@ -1,45 +1,86 @@
-<div class="column">
+<div class="container mt-4">
   <div class="card">
-    <!-- <img src="../../../assets/images/meow.jpg" alt="" style="width:100%"> -->
-    <div style="padding: 8%; ">
-      <h1 style="text-align: center;">Hi there! I'm Anh</h1>
-      <h6 style="text-align: center;">Pham Thi Quynh Anh | Phạm Thị Quỳnh Anh</h6>
-      <hr>
+    <div class="card-body text-center" style="margin-top: 2em;">
+      <h1>Hi there! I'm Anh</h1>
+      <h6>Pham Thi Quynh Anh | Phạm Thị Quỳnh Anh</h6>
+      <hr class="custom-hr">
       
-      <h2 style="padding-bottom: 1%; padding-top: 0.5% ">Get to know me</h2>
-      <div class="row">
-        <div class="col-6 box-me">
-          <p class="title" style="padding: 0.5%;">I am a Final-year student majoring in Software Engineering.</p>
-        </div>
-        <div class="col-6">
-          <img src="../../../assets/images/meow.jpg" alt="" style="width:100%">
+      <h2 class="mt-4">Get to know me</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 mb-3">
+          <p >I am a final-year student majoring in Software Engineering. As a software engineering major, I aspire to complete many projects in the future.</p>
         </div>
       </div>
 
-      <h2 style="padding-bottom: 1%; padding-top: 0.5% ">Education</h2>
-      <div class="row">
-        <div class="col-8">
-          <h5 style="padding-left: 0.5%;">Vietnam Maritime University</h5>
-          <h6 style="padding-left: 0.5%;">Software Engineering</h6>
-          <h6 style="padding: 0.5%; margin-bottom: 0.5%;" class="title">Oct 2020 - now</h6>
+      <h2 class="mt-4">Education</h2>
+      <div class="row align-items-center">
+        <div class="col-md-8 mb-3 mb-md-0 d-flex flex-column justify-content-center">
+          <h5>Vietnam Maritime University</h5>
+          <h6>Software Engineering</h6>
+          <h6 class="title">Oct 2020 - now</h6>
         </div>
-        <div class="col-4">
-          <img src="../../../assets/images/logo-school.svg" alt="" style="width:50%">
+        <div class="col-md-4 text-center">
+          <img src="../../../assets/images/logo-school.svg" alt="School Logo" class="img-fluid" style="width: 50%;">
         </div>
       </div>
 
-      <h2 style="padding-bottom: 1%; padding-top: 0.5% ">Contact</h2>
-      <div class="row">
-        <div class="col-8">
-          <div style="margin: 10px 0;">
-            <span style="padding-left: 0.5%;">Contact by: &ensp; </span>
-            <a href="https://github.com/anh0701"><i class="bi bi-github" style="color: var(--dark-icon-github)"></i></a>
-            <a href="https://gitlab.com/anh0701"><i class="bi bi-gitlab" style="color: #e24329;"></i></a>
-            <a href="mailto:quynhanhphamthi01@gmail.com"><i class="bi bi-google" style="color: red;"></i></a>
+      <h2 class="mt-4">Projects</h2>
+      <div class="project-list text-left">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="project d-flex justify-content-between align-items-center">
+              <h5 class="mb-0">Project Name: Cat-store</h5>
+              <h6 class="mb-0 title">2023 - now</h6>
+            </div>
+            <p><strong>GitHub:</strong> <a href="https://github.com/anh0701/cat-store" target="_blank"> GitHub Repository</a></p>
+            <p><strong>Members:</strong> 1</p>
+            <p><strong>Technologies Used:</strong> Laravel, MySQL, RESTful API, Docker.</p>
+            <p><strong>Project Purpose:</strong> This project aimed to develop a web application for managing the sale of cat supplies.</p>
+          </div>
+          <hr class="project-divider">
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="project d-flex justify-content-between align-items-center">
+              <h5 class="mb-0">Project Name: Shopping App </h5>
+              <h6 class="mb-0 title">2023 - now</h6>
+            </div>
+            <p><strong>GitHub:</strong> <a href="https://github.com/anh0701/shopping-app" target="_blank"> GitHub Repository</a></p>
+            <p><strong>Members:</strong> 1</p>
+            <p><strong>Technologies Used:</strong> Flutter, Atomic Design.</p>
+            <p><strong>Project Purpose:</strong> This project aimed to develop a web application for food ordering.</p>
+          </div>
+          <hr class="project-divider">
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="project d-flex justify-content-between align-items-center">
+              <h5 class="mb-0">Project Name: Electronics-store</h5>
+              <h6 class="mb-0 title">2023 - now</h6>
+            </div>
+            <p><strong>GitHub:</strong> <a href="https://github.com/anh0701/electronics-store" target="_blank"> GitHub Repository</a></p>
+            <p><strong>Members:</strong> 5</p>
+            <p><strong>Technologies Used:</strong> Laravel, MySQL, MVC.</p>
+            <p><strong>Project Purpose:</strong> This project aimed to develop a web application for introducing and supporting the business of electronic products.</p>
           </div>
         </div>
-        <div class="col-sm"></div>
+
+        <!-- Add more projects as needed -->
       </div>
+
+      <h2 class="mt-4">Contact</h2>
+      <div class="row">
+        <div class="col-12">
+          <div class="contact-icons">
+            <span>Contact by: </span>
+            <a href="https://github.com/anh0701" style="color: var(--dark-icon-github)"><i class="bi bi-github"></i></a>
+            <a href="https://gitlab.com/anh0701" style="color: #e24329;"><i class="bi bi-gitlab"></i></a>
+            <a href="mailto:quynhanhphamthi01@gmail.com" style="color: red;"><i class="bi bi-google"></i></a>
+          </div>
+        </div>
+      </div> 
     </div>
   </div>
 </div>

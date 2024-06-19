@@ -1,74 +1,58 @@
-
-hr{
-  font-size: 1em;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-  line-height: 1.5;
-  text-align: center;
-  padding: 0;
-  box-sizing: border-box;
-  background: linear-gradient(to right, #fff, #000, #fff);
+.custom-hr {
   height: 1px;
+  background: linear-gradient(to right, #fff, #000, #fff);
   border: none;
-  margin: 2rem 10rem 0 10rem;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+h2{
+  margin-bottom: 1em;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  font-family: arial;
-  width: 95%;
-  margin: 2% 2%;
-  box-sizing: content-box !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 10px;
 }
 
 .title {
-    color: grey;
+  color: grey;
+  font-size: 1em;
+  font-family: 'Inter', sans-serif;
 }
 
-.box-me{
-  border-radius: 10px;
-  background-color: #cbcbcb;
-  margin-bottom: 1%;
+.project-list {
+  text-align: left;
 }
 
-.button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10%;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
+.project {
+  margin-bottom: 2rem;
+}
 
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-    margin-right: 8px;
-  }
-  a:hover {
-    opacity: 0.7;
-  }
+.project-divider {
+  width: 70%;
+  margin: 2rem auto;
+  border-top: 1px solid #ddd;
+}
 
-  .col-sm{
-    margin-right: 1%;
+.contact-icons {
+  margin-bottom: 2rem; /* Thêm khoảng cách phía dưới phần Contact */
+}
 
+.contact-icons a {
+  font-size: 1.5em;
+  margin: 0 10px;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+.contact-icons a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 650px) {
+  .custom-hr {
+    width: 90%;
   }
-  .row{
-    margin-left: 3%;
-    margin-right: 3%;
-  }
+}
