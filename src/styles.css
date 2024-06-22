@@ -3,6 +3,9 @@
     --dark-bg-color: #1a1a1a;
     --dark-text-color: #f2f2f2;
     --dark-icon-github: #ffff;
+    --text-button-skill: #1a1a1a;
+    --background-button-skill: rgb(184 200 218);
+    --button-skill-hover: #f0f0f0;
 }
 
 [data-bs-theme="light"] {
@@ -10,5 +13,8 @@
     --dark-text-color: #1a1a1a;
     --dark-text-color-menu: #ffff;
     --dark-icon-github: #1a1a1a;
+    --text-button-skill: #ffff;
+    --background-button-skill: rgb(35 50 64);
+    --button-skill-hover: rgb(10 74 114);
 }
   

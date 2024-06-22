@@ -1,0 +1,30 @@
+.group-skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; 
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+  }
+  
+.skill {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-button-skill);
+    background-color: var(--background-button-skill);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: rgb(154 204 250) 0.3s;
+  }
+  
+.skill:hover {
+    background-color: var(--button-skill-hover);
+  }
+  
+.sl-c-icon {
+    margin-right: 8px;
+  }
+  

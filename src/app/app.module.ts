@@ -16,6 +16,7 @@ import { MenuComponent } from './component/general/menu/menu.component';
 import { SlideshowComponent } from './component/general/slideshow/slideshow.component';
 import { FloatButtonComponent } from './component/general/float-button/float-button.component';
 import { PostsComponent } from './component/home/blog/posts/posts.component';
+import { SkillButtonsComponent } from './component/general/skill-buttons/skill-buttons.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { PostsComponent } from './component/home/blog/posts/posts.component';
     HomeComponent,
     AboutComponent,
     BlogComponent,
-    ContactComponent
+    ContactComponent,
+    SkillButtonsComponent
   ],
   imports: [
     BrowserModule,
