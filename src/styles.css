@@ -6,6 +6,8 @@
     --text-button-skill: #1a1a1a;
     --background-button-skill: rgb(184 200 218);
     --button-skill-hover: #f0f0f0;
+    --button-see-more-shadow: rgba(255, 255, 255, 0.3);
+    --button-see-more-bg: #212529;
 }
 
 [data-bs-theme="light"] {
@@ -16,5 +18,7 @@
     --text-button-skill: #ffff;
     --background-button-skill: rgb(35 50 64);
     --button-skill-hover: rgb(10 74 114);
+    --button-see-more-shadow: rgba(7, 7, 7, 0.2);
+    --button-see-more-bg: #fff;
 }
   
