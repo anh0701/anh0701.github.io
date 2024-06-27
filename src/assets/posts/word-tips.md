@@ -52,4 +52,6 @@
                    <br> &ensp; ● &ensp; Click the Size button, and then click More Paper Sizes.
             </ul>
         </li>
+        
+        <li>50</li>
     </ul>
