@@ -10,4 +10,5 @@ export class AppComponent{
   constructor(private title: Title){
     title.setTitle('Anh0701\'s portfolio')
   };
+
 }

@@ -1,0 +1,13 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-info">
+            <p><strong>Email: </strong> <a href="mailto:{{ contactInfo.email }}">{{ contactInfo.email }}</a></p>
+            <!-- <p><strong>Phone: </strong> <a href="tel:{{ contactInfo.phone }}">{{ contactInfo.phone }}</a></p> -->
+            <p><strong>LinkedIn: </strong> <a [href]="contactInfo.linkedin" target="_blank">{{ contactInfo.linkedin  }}</a></p>
+            <p><strong>GitHub: </strong> <a [href]="contactInfo.github" target="_blank">{{ contactInfo.github  }}</a></p>
+            <p><strong>GitLab: </strong> <a [href]="contactInfo.gitlab" target="_blank">{{ contactInfo.gitlab  }}</a></p>
+        </div>
+    </div>
+</section>

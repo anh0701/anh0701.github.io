@@ -1,0 +1,22 @@
+<!-- projects.component.html -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="timeline">
+            <div *ngFor="let project of projects; let i = index" class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>
+                        <a [href]="project.githubLink" target="_blank">{{ project.title }}</a>
+                    </h3>
+                    <p class="timeline-date">{{ project.date }}</p>
+                    <p>{{ project.description }}</p>
+                    <p><strong>Tech Stack:</strong> {{ project.techStack.join(', ') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

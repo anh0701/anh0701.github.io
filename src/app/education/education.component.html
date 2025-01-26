@@ -1,0 +1,15 @@
+<section id="education" class="education">
+    <h2>Education</h2>
+
+    <div *ngFor="let edu of educationList" class="education-item">
+        <div class="education-info">
+            <h3>{{ edu.school }}</h3>
+            <p class="degree">{{ edu.degree }}</p>
+            <p class="duration">{{ edu.startDate }} - {{ edu.endDate }}</p>
+            <p class="description">{{ edu.description }}</p>
+        </div>
+        <div class="education-logo">
+            <img [src]="edu.logo" alt="{{ edu.school }} logo">
+        </div>
+    </div>
+</section>
