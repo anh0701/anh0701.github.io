@@ -1,7 +1,7 @@
 .education {
     padding: 50px 20px;
     /* background-color: #fafafa; */
-    color: #333;
+    /* color: #333; */
 }
 
 .education h2 {
@@ -28,22 +28,22 @@
 
 .education-info h3 {
     font-size: 1.6rem;
-    color: #333;
+    /* color: #333; */
 }
 
 .education-info .degree {
     font-style: italic;
-    color: #777;
+    /* color: #777; */
 }
 
 .education-info .duration {
     font-size: 0.9rem;
-    color: #555;
+    /* color: #555; */
 }
 
 .education-info .description {
     font-size: 1rem;
-    color: #444;
+    /* color: #444; */
     margin-top: 10px;
 }
 

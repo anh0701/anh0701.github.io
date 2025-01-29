@@ -1,5 +1,5 @@
 .about {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     padding: 50px 20px;
 }
 
@@ -34,12 +34,12 @@
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    /* color: #333; */
 }
 
 .intro p {
     font-size: 1.2rem;
-    color: #666;
+    /* color: #666; */
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;

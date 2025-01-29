@@ -11,6 +11,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './education/education.component';
 import { FooterComponent } from './footer/footer.component';
+import { PostComponent } from './post/post.component';
+import { GiscusWrapperComponent } from './giscus-wrapper/giscus-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     EducationComponent,
     FooterComponent,
+    PostComponent,
+    GiscusWrapperComponent,
     
   ],
   imports: [
