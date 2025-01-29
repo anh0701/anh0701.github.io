@@ -6,6 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
 
   scrollTo(elementId: string): void {
     const element = document.getElementById(elementId);
@@ -17,6 +23,7 @@ export class HeaderComponent {
         top: element.offsetTop - headerHeight,  
         behavior: 'smooth'
       });
+      this.isMenuOpen = false;
     }
   }
 
