@@ -13,6 +13,7 @@ import { EducationComponent } from './education/education.component';
 import { FooterComponent } from './footer/footer.component';
 import { PostComponent } from './post/post.component';
 import { GiscusWrapperComponent } from './giscus-wrapper/giscus-wrapper.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,11 +27,12 @@ import { GiscusWrapperComponent } from './giscus-wrapper/giscus-wrapper.componen
     FooterComponent,
     PostComponent,
     GiscusWrapperComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
 
   ],
   providers: [],
