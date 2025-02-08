@@ -89,12 +89,14 @@
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
+  text-align: center;
 }
 
 .post-author {
   font-size: 14px;
   color: #666;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .post-content {
