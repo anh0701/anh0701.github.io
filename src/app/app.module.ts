@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PostComponent } from './post/post.component';
 import { GiscusWrapperComponent } from './giscus-wrapper/giscus-wrapper.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     PostComponent,
     GiscusWrapperComponent,
+    PostDetailComponent,
 
   ],
   imports: [

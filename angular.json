@@ -4,6 +4,13 @@
   "newProjectRoot": "projects",
   "projects": {
     "anh0701.github.io": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "vi": "src/assets/i18n/vi.json",
+          "en": "src/assets/i18n/en.json"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -22,7 +29,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/posts"
             ],
             "styles": [
               "src/styles.css",

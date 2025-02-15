@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Laravel Setup Guide</title> -->
+</head>
+<body>
+    <p></p>
+    
+    <img class="post-image" src="assets/images/Laravel.svg" alt="Image">
+    
+    <p>Step 1: Install <strong>Composer</strong> Dependencies</p>
+    <pre><code>composer install</code></pre>
+    
+    <p>Step 2: Create a copy of your <strong>.env</strong> file</p>
+    <pre><code>cp .env.example .env</code></pre>
+    
+    <p>Step 3: Generate an app encryption <strong>key</strong></p>
+    <pre><code>php artisan key:generate</code></pre>
+    
+    <p>Step 4: In the <strong>.env</strong> file, add database information to allow Laravel to connect to the database. In the <strong>.env</strong> file, fill in the <strong>DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD</strong> options.</p>
+    
+    <p>Step 5: Migrate the <strong>database</strong></p>
+    <pre><code>php artisan migrate</code></pre>
+</body>
+</html>

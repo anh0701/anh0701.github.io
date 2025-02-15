@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Docker Interview Questions</title> -->
+</head>
+<body>
+    <p><strong>1. Kiến thức cơ bản về Docker</strong></p>
+    <ul>
+        <li>Docker là gì và nó hoạt động như thế nào?</li>
+        <li>Sự khác biệt giữa Docker Container và Virtual Machine (VM)?</li>
+        <li>Docker Image là gì?</li>
+        <li>Docker Container là gì?</li>
+        <li>Dockerfile là gì và nó có vai trò gì trong Docker?</li>
+        <li>Docker Hub là gì?</li>
+        <li>Docker Daemon và Docker CLI có gì khác nhau?</li>
+    </ul>
+    
+    <p><strong>2. Câu hỏi về cách sử dụng Docker</strong></p>
+    <ul>
+        <li>Bạn làm thế nào để tạo một Docker Image từ Dockerfile?</li>
+        <li>Làm thế nào để chạy một container từ một Docker Image?</li>
+        <li>Làm thế nào để dừng một container đang chạy?</li>
+        <li>Làm thế nào để xóa một container hoặc image trong Docker?</li>
+        <li>Làm thế nào để xây dựng một image từ Dockerfile?</li>
+        <li>Sự khác biệt giữa lệnh docker run và docker exec là gì?</li>
+        <li>Giải thích các tùy chọn thường dùng của lệnh docker run như -d, -p, --name?</li>
+    </ul>
+    
+    <p><strong>3. Các vấn đề về mạng và lưu trữ</strong></p>
+    <ul>
+        <li>Docker Networks là gì? Có những loại mạng nào trong Docker?</li>
+        <li>Giải thích về Docker Volumes và tại sao bạn cần sử dụng chúng thay vì lưu trữ trực tiếp trong container?</li>
+        <li>Docker Bridge network là gì và khi nào sử dụng nó?</li>
+        <li>Docker Compose là gì và khi nào bạn cần sử dụng nó?</li>
+        <li>Làm thế nào để kết nối nhiều containers trong Docker?</li>
+    </ul>
+    
+    <p><strong>4. Câu hỏi về bảo mật và tối ưu hóa</strong></p>
+    <ul>
+        <li>Cách Docker cô lập các container và bảo vệ chúng khỏi các nguy cơ bảo mật?</li>
+        <li>Làm thế nào để giảm kích thước của Docker image?</li>
+        <li>Docker Layer là gì và cách chúng ảnh hưởng đến việc xây dựng image?</li>
+        <li>Làm thế nào để tạo một Dockerfile tối ưu, giúp giảm thiểu thời gian build và kích thước image?</li>
+        <li>Làm thế nào để giới hạn tài nguyên (CPU, RAM) cho container?</li>
+    </ul>
+    
+    <p><strong>5. Các công cụ và quy trình nâng cao</strong></p>
+    <ul>
+        <li>Làm thế nào để tự động hóa quá trình triển khai với Docker?</li>
+        <li>Giải thích về Docker Swarm và Kubernetes. Sự khác biệt giữa Docker Swarm và Kubernetes là gì?</li>
+        <li>Làm thế nào để triển khai một ứng dụng phân tán (multi-container) với Docker Compose?</li>
+        <li>Docker Registry là gì? Làm thế nào để sử dụng Docker Registry riêng thay vì Docker Hub?</li>
+        <li>Làm thế nào để debug một container đang chạy?</li>
+    </ul>
+    
+    <p><strong>6. Các tình huống thực tế và vấn đề thường gặp</strong></p>
+    <ul>
+        <li>Kể về một tình huống bạn đã sử dụng Docker để giải quyết vấn đề trong công việc của bạn.</li>
+        <li>Cách bạn xử lý các vấn đề như container không khởi động, lỗi khi build image hoặc lỗi mạng trong Docker?</li>
+        <li>Làm thế nào để làm việc với các môi trường đa container, ví dụ như một hệ thống web với frontend và backend riêng biệt?</li>
+    </ul>
+    
+    <p><strong>7. Câu hỏi về quy trình và quản lý</strong></p>
+    <ul>
+        <li>Làm thế nào bạn quản lý phiên bản của Docker Image?</li>
+        <li>Làm thế nào bạn xử lý các container khi bạn cần scaling hoặc cập nhật ứng dụng?</li>
+        <li>Khi nào bạn nên sử dụng Docker trong môi trường phát triển, staging, và production?</li>
+    </ul>
+    
+    <p><strong>8. Câu hỏi về Docker và CI/CD</strong></p>
+    <ul>
+        <li>Giải thích cách Docker giúp cải thiện quy trình Continuous Integration (CI) và Continuous Deployment (CD)?</li>
+        <li>Làm thế nào để tích hợp Docker vào pipeline CI/CD của bạn?</li>
+    </ul>
+    
+    <p><strong>9. Các câu hỏi về troubleshooting và performance</strong></p>
+    <ul>
+        <li>Bạn sẽ làm gì nếu container của bạn bị "lơ lửng" hoặc không dừng lại khi sử dụng lệnh docker stop?</li>
+        <li>Làm thế nào để giám sát và tối ưu hóa hiệu suất của các container đang chạy?</li>
+    </ul>
+    
+    <p><strong>10. Câu hỏi về Docker trong môi trường thực tế</strong></p>
+    <ul>
+        <li>Khi nào bạn sẽ chọn Docker để triển khai ứng dụng thay vì các công cụ khác như VM, hoặc sử dụng các dịch vụ cloud như AWS Lambda?</li>
+        <li>Docker có thể tương thích với các dịch vụ cloud như AWS, Azure, hoặc Google Cloud không? Giải thích cách Docker tích hợp vào các môi trường này.</li>
+    </ul>
+    
+    <p><strong>Một số câu hỏi tình huống thực tế có thể hỏi:</strong></p>
+    <ul>
+        <li>"Bạn có một ứng dụng web với frontend và backend. Làm thế nào bạn sử dụng Docker để triển khai ứng dụng này?"</li>
+        <li>"Giải thích quy trình tự động hóa deployment ứng dụng sử dụng Docker trong môi trường CI/CD của bạn."</li>
+    </ul>
+</body>
+</html>

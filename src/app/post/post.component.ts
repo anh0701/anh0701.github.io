@@ -1,33 +1,33 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { PostService } from '../services/post.service';
+import { Router } from '@angular/router';
+import { Post } from '../models/post.model';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class PostComponent implements OnInit {
-  posts:  any[] = [];
+  posts: Post[] = [];
 
-  constructor(private http: HttpClient) { }
-
-  isPostDetail = false;
-  selectedPost: any;
+  constructor(private postService: PostService, private router: Router) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('assets/posts.json')
-      .subscribe(data => {
-        this.posts = data;
-      });
+    this.loadPosts();
   }
 
-  viewPost(post: any) {
-    this.selectedPost = post;
-    this.isPostDetail = true;
+
+  loadPosts(): void {
+    this.postService.getPosts().subscribe((posts) => {
+      this.posts = posts;
+    });
   }
-  goBack() {
-    this.isPostDetail = false;
-    this.selectedPost = null;
+
+  viewPostDetail(slug: string): void {
+    this.router.navigate(['/post', slug]);
   }
+
 }

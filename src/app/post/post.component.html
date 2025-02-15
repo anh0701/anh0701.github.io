@@ -1,7 +1,7 @@
 
 <section id="post-list">
-    <div *ngIf="!isPostDetail" class="post-list">
-        <div *ngFor="let post of posts" class="post-item" (click)="viewPost(post)">
+    <div class="post-list">
+        <div *ngFor="let post of posts" class="post-item" (click)="viewPostDetail(post.slug)">
             <div class="post-preview">
                 <img *ngIf="post.image" [src]="post.image" alt="Post Image" class="post-image" />
                 <div class="post-info">
@@ -16,17 +16,3 @@
             </div>
         </div>
     </div>
-
-    
-    <div *ngIf="isPostDetail" class="post-detail">
-        <button (click)="goBack()" class="back-btn">&#8592;</button> 
-        <h1 class="post-title">{{ selectedPost?.title }}</h1>
-        <p class="post-author">{{ selectedPost?.author }} - {{ selectedPost?.time }}</p>
-        <div class="post-content" [innerHTML]="selectedPost?.content"></div>
-
-       
-        <div class="post-comments">
-            <!-- <app-giscus-wrapper></app-giscus-wrapper> -->
-        </div>
-    </div>
-</section>

@@ -1,0 +1,9 @@
+<div *ngIf="selectedPost" class="post-detail">
+    <h1 class="post-title">{{ selectedPost.title }}</h1>
+    <p class="post-author">{{ selectedPost.author }} - {{ selectedPost.time }}</p>
+    <div class="post-content" [innerHTML]="postContent"></div>
+  </div>
+
+  <div *ngIf="!selectedPost" class="no-post">
+    <p class="post-content">Bài viết không tồn tại.</p>
+  </div>
