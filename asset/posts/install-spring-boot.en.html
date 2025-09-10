@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Spring Boot Setup Guide</title> -->
+</head>
+<body>
+    <p></p>
+    
+    <img class="post-image" src="asset/images/spring-boot.png" alt="Image">
+    
+    <p>Step 1: Install Scoop</p>
+    <pre><code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code></pre>
+    <pre><code>Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression</code></pre>
+    
+    <p>Step 2: Install Java</p>
+    <pre><code>scoop bucket add java extras main</code></pre>
+    <pre><code>scoop install java/openjdk21 extras/springboot main/maven main/gradle</code></pre>
+    
+    <p>Step 3: Install IntelliJ IDEA Ultimate</p>
+    <pre><code>scoop install extras/idea-ultimate</code></pre>
+</body>
+</html
