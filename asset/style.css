@@ -319,7 +319,7 @@ header nav {
   }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   main { width: 95%; margin: 1rem auto; }
   .card { padding: 1rem; }
-}
+} */
