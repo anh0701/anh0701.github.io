@@ -5,52 +5,49 @@
   <title>My Blog</title>
   <link rel="stylesheet" href="asset/style.css">
   <script src="asset/script.js" type="module"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </head>
 <body>
-  <header>
-    <h1 data-i18n="blogTitle"><a href="index.html">My Blog</a></h1>
-    <div id="menu-toggle">☰</div>
-    <nav>
-      <a data-i18n="home" href="index.html">Home</a>
-      <a data-i18n="about" href="about.html">About</a>
-      <a data-i18n="posts" href="posts.html">Posts</a>
+  <div class="container">
 
-      <div class="toggles-dropdown">
-        <button class="toggle-theme">🌓</button>
-        <button class="toggle-lang">EN</button>
+
+    <aside class="sidebar-left">
+      <div class="about-card">
+        <img src="avatar.jpg" alt="Avatar">
+        <h2>About Me</h2>
+        <p>Lập trình viên yêu thích web & backend. Chia sẻ kiến thức và kinh nghiệm lập trình.</p>
       </div>
-    </nav>
+    </aside>
 
-      <div class="toggles">
-        <button class="toggle-theme">🌙</button>
-        <button class="toggle-lang">EN/VI</button>
+
+    <main class="content">
+      <h1>Bài viết mới nhất</h1>
+      <div id="posts"></div>
+      <div id="post-detail" class="post-detail" style="display:none;">
+        <button id="back-btn">← Back</button>
+        <div id="post-content"></div>
+      </div>
+      <div class="load-more-wrapper">
+        <button id="load-more">Load thêm bài viết</button>
       </div>
 
-  </header>
+      <section class="related">
+        <h3>Related Posts</h3>
+        <ul id="related-posts"></ul>
+      </section>
+    </main>
 
-  <main>
-    <!-- <section class="intro">
-      <h1></h1>
-      <p></p>
-    </section> -->
-  
-    <section class="latest-posts">
-      <h2 data-i18n="latestPosts" id="latest-posts-title">Latest Posts</h2>
-      <div id="posts-list-last" class="cards"></div>
+  </div>
 
-      <div class="see-more-wrapper">
-        <a data-i18n="viewAllPosts" id="view-all-posts" href="posts.html">→ View all posts</a>
-      </div>
-    </section>
-  </main>
-  
+  <!-- <footer>
+    <p>Copyright © 2015 - 2025 Anh</p>
+  </footer> -->
 
-  <footer>
-    <p>&copy; 2025 Anh's Blog. All rights reserved.</p>
-  </footer>
 </body>
 </html>

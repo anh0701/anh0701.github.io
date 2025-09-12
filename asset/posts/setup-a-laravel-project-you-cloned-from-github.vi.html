@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Laravel Setup Guide</title> -->
+</head>
+<body>
+    <p></p>
+    
+    <img class="post-image" src="asset/images/Laravel.svg" alt="Image">
+    
+    <p>Bước 1: Cài đặt <strong>Composer</strong> Dependencies</p>
+    <pre><code>composer install</code></pre>
+    
+    <p>Bước 2: Tạo 1 file <strong>.env</strong></p>
+    <pre><code>cp .env.example .env</code></pre>
+    
+    <p>Bước 3: Tạo <strong>key</strong> mã hóa cho ứng dụng</p>
+    <pre><code>php artisan key:generate</code></pre>
+    
+    <p>Bước 4: Trong file <strong>.env</strong>, bạn cần thêm thông tin kết nối cơ sở dữ liệu để Laravel có thể truy cập được. Trong file <strong>.env</strong>, điền các thông tin <strong>DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD</strong>.</p>
+    
+    <p>Bước 5: Chạy migrate cho <strong>cơ sở dữ liệu</strong></p>
+    <pre><code>php artisan migrate</code></pre>
+</body>
+</html>
