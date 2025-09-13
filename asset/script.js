@@ -1,9 +1,10 @@
 import { posts } from './posts.js';
-
+import { translations } from './translations.js';
 
 let lang = "en";
 const userLang = navigator.language || navigator.userLanguage;
 if (userLang.startsWith("vi")) lang = "vi";
+console.log(userLang);
 
 const postList = document.getElementById("posts");
 const postDetail = document.getElementById("post-detail");
@@ -69,7 +70,11 @@ function renderRelatedPosts() {
 
 async function loadPostContent(post) {
   try {
-    const res = await fetch(`asset/posts/${post.file}.${lang}.${post.type}`);
+    const filePath = `asset/posts/${post.file}.${lang}.${post.type}`;
+    const res = await fetch(filePath);
+    
+    if (!res.ok) throw new Error("Không tìm thấy file");
+
     let content = await res.text();
 
     if (post.type === "md") {
@@ -77,27 +82,28 @@ async function loadPostContent(post) {
     }
 
     postList.style.display = "none";
-    document.getElementById("load-more").style.display = "none";
+    loadMoreBtn.style.display = "none";
     if (relatedContainer) relatedContainer.parentElement.style.display = "none";
 
     postDetail.innerHTML = `
-    <!--  <h1>${post.title[lang]}</h1>  -->
       <p class="date">📅 ${formatDate(post.date, lang)}</p>
       <div class="post-body">${content}</div>
-      <button id="back-btn">⬅ Quay lại</button>
+      <button id="back-btn">⬅ ${lang === "vi" ? "Quay lại" : "Back"}</button>
     `;
     postDetail.style.display = "block";
 
     document.getElementById("back-btn").addEventListener("click", () => {
       postDetail.style.display = "none";
       postList.style.display = "block";
-      document.getElementById("load-more").style.display = "block";
+      loadMoreBtn.style.display = "block";
       if (relatedContainer) relatedContainer.parentElement.style.display = "block";
     });
+
   } catch (err) {
-    postDetail.innerHTML = "<p>Lỗi tải nội dung.</p>";
+    postDetail.innerHTML = `<p>${lang === "vi" ? "Lỗi tải nội dung." : "Failed to load content."}</p>`;
   }
 }
+
 
 function attachDetailEvents() {
   document.querySelectorAll(".post-link").forEach(link => {
@@ -151,7 +157,6 @@ function renderPostsBatch() {
     postList.appendChild(div);
   });
 
-  // Gắn sự kiện click cho batch mới
   attachDetailEvents();
 
   currentIndex = nextIndex;
@@ -161,14 +166,24 @@ function renderPostsBatch() {
   }
 }
 
+function translateUI() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    // el.textContent = translations[currentLang][key];
+    el.innerHTML = translations[lang][key];
+  });
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // renderPosts();
   renderRelatedPosts();
 
   renderPostsBatch();
-
+  
   loadMoreBtn.addEventListener("click", () => {
     renderPostsBatch();
   });
+
+  translateUI();
 });

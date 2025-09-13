@@ -19,26 +19,39 @@
 
     <aside class="sidebar-left">
       <div class="about-card">
-        <img src="avatar.jpg" alt="Avatar">
-        <h2>About Me</h2>
-        <p>Lập trình viên yêu thích web & backend. Chia sẻ kiến thức và kinh nghiệm lập trình.</p>
+        <img src="asset/images/avatar.png" alt="Avatar">
+
+        <h1 data-i18n="about_title">About Me</h1>
+        <p class="intro" data-i18n="about_intro"></p>
+
+        <!-- <h2 data-i18n="skills_title">Skills & Interests</h2> -->
+        <ul class="skills">
+          <li><strong>Frontend:</strong> HTML, CSS, TypeScript, JavaScript, Angular, React</li>
+          <li><strong>Backend:</strong> Spring boot, Laravel RESTful APIs, MySQL, PostgreSQL</li>
+          <li><strong>Tools:</strong> Git, GitHub, Docker, Postman</li>
+          <li><strong>Other:</strong> Problem Solving, Debugging</li>
+        </ul>
+
+        <h2 data-i18n="contact_title">Contact</h2>
+        <p>Email: <a style="color: var(--link);" href="mailto:quynhanhphamthi01@example.com">quynhanhphamthi01@example.com</a></p>
+  
       </div>
     </aside>
 
 
     <main class="content">
-      <h1>Bài viết mới nhất</h1>
+      <h1 data-i18n="posts">Post</h1>
       <div id="posts"></div>
       <div id="post-detail" class="post-detail" style="display:none;">
         <button id="back-btn">← Back</button>
         <div id="post-content"></div>
       </div>
       <div class="load-more-wrapper">
-        <button id="load-more">Load thêm bài viết</button>
+        <button  id="load-more" data-i18n="read_more">Read more</button>
       </div>
 
       <section class="related">
-        <h3>Related Posts</h3>
+        <h3 data-i18n="latestPosts">Related Posts</h3>
         <ul id="related-posts"></ul>
       </section>
     </main>
