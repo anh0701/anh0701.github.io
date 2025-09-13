@@ -34,7 +34,7 @@ function renderPosts() {
     div.innerHTML = `
       <img src="${post.image}" alt="${post.title[lang]}">
       <h2><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h2>
-      <p class="date">📅 ${formatDate(post.date, lang)}</p>
+      <p class="date"> <span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
       <p class="excerpt">${post.excerpt[lang]}</p>
       <div class="tags">
         ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
@@ -57,8 +57,7 @@ function renderRelatedPosts() {
   selected.forEach(post => {
     const li = document.createElement("li");
     li.innerHTML = `
-      <span class="icon">📅</span>
-      <span class="date">${formatDate(post.date, lang)}</span>
+      <span class="date"> <span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</span>
       <span class="sep">»</span>
       <a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a>
     `;
@@ -86,7 +85,7 @@ async function loadPostContent(post) {
     if (relatedContainer) relatedContainer.parentElement.style.display = "none";
 
     postDetail.innerHTML = `
-      <p class="date">📅 ${formatDate(post.date, lang)}</p>
+      <p class="date"><span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
       <div class="post-body">${content}</div>
       <button id="back-btn">⬅ ${lang === "vi" ? "Quay lại" : "Back"}</button>
     `;
@@ -148,7 +147,7 @@ function renderPostsBatch() {
     div.innerHTML = `
       <img src="${post.image}" alt="${post.title[lang]}">
       <h2><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h2>
-      <p class="date">📅 ${formatDate(post.date, lang)}</p>
+      <p class="date"><span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
       <p class="excerpt">${post.excerpt[lang]}</p>
       <div class="tags">
         ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
