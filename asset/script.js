@@ -51,8 +51,11 @@ function renderRelatedPosts() {
   if (!relatedContainer) return;
 
   relatedContainer.innerHTML = "";
-  const shuffled = [...posts].sort(() => 0.5 - Math.random());
-  const selected = shuffled.slice(0, 3);
+  // const shuffled = [...posts].sort(() => 0.5 - Math.random());
+  // const selected = shuffled.slice(0, 3);
+
+  const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const selected = sorted.slice(0, 3);
 
   selected.forEach(post => {
     const li = document.createElement("li");
