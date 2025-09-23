@@ -18,7 +18,7 @@ export const posts = [
     {
         id:1,
         file: "git-basic",
-        date: "2025-09-05",
+        date: "2024-09-05",
         type: "md",
         title: {
             en: "Git Basic",
