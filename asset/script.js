@@ -141,8 +141,9 @@ function attachDetailEvents() {
 //   }
 
 function renderPostsBatch() {
+  const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
   const nextIndex = currentIndex + postsPerPage;
-  const batch = posts.slice(currentIndex, nextIndex);
+  const batch = sorted.slice(currentIndex, nextIndex);
 
   batch.forEach(post => {
     const div = document.createElement("div");
