@@ -33,7 +33,7 @@ function renderPosts() {
 
     div.innerHTML = `
       <img src="${post.image}" alt="${post.title[lang]}">
-      <h2><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h2>
+      <h3><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h3>
       <p class="date"> <span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
       <p class="excerpt">${post.excerpt[lang]}</p>
       <div class="tags">
@@ -150,7 +150,7 @@ function renderPostsBatch() {
     div.classList.add("post");
     div.innerHTML = `
       <img src="${post.image}" alt="${post.title[lang]}">
-      <h2><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h2>
+      <h3><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h3>
       <p class="date"><span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
       <p class="excerpt">${post.excerpt[lang]}</p>
       <div class="tags">

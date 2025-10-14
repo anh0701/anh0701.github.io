@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>My Blog</title>
@@ -11,8 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
   <div class="container">
 
@@ -21,7 +23,7 @@
       <div class="about-card">
         <img src="asset/images/avatar.png" alt="Avatar">
 
-        <h1 data-i18n="about_title">About Me</h1>
+        <h3 data-i18n="about_title">About Me</h3>
         <p class="intro" data-i18n="about_intro"></p>
 
         <!-- <h2 data-i18n="skills_title">Skills & Interests</h2> -->
@@ -32,22 +34,32 @@
           <li><strong>Other:</strong> Problem Solving, Debugging</li>
         </ul>
 
-        <h2 data-i18n="contact_title">Contact</h2>
-        <p>Email: <a style="color: var(--link);" href="mailto:quynhanhphamthi01@gmail.com">quynhanhphamthi01@gmail.com</a></p>
-  
+        <h3 data-i18n="contact_title">Contact</h3>
+        <div class="contact-icons">
+          <a href="mailto:quynhanhphamthi01@gmail.com" class="mail" aria-label="Email">
+            <i data-lucide="mail"></i>
+          </a>
+          <a href="https://github.com/anh0701" target="_blank" class="github" aria-label="GitHub">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://gitlab.com/anh0701" target="_blank" class="gitlab" aria-label="GitLab">
+            <i data-lucide="gitlab"></i>
+          </a>
+        </div>
+
       </div>
     </aside>
 
 
     <main class="content">
-      <h1 data-i18n="posts">Post</h1>
+      <h2 data-i18n="posts">Post</h2>
       <div id="posts"></div>
       <div id="post-detail" class="post-detail" style="display:none;">
         <button id="back-btn">← Back</button>
         <div id="post-content"></div>
       </div>
       <div class="load-more-wrapper">
-        <button  id="load-more" data-i18n="read_more">Read more</button>
+        <button id="load-more" data-i18n="read_more">Read more</button>
       </div>
 
       <section class="related">
@@ -57,10 +69,13 @@
     </main>
 
   </div>
-
+  <script>
+    lucide.createIcons();
+  </script>
   <!-- <footer>
     <p>Copyright © 2015 - 2025 Anh</p>
   </footer> -->
 
 </body>
+
 </html>
