@@ -16,8 +16,9 @@ export const posts = [
     //     tags: ["intro", "personal"]
     // },
     {
+        id:1,
         file: "git-basic",
-        date: "2025-09-05",
+        date: "2024-09-05",
         type: "md",
         title: {
             en: "Git Basic",
@@ -32,6 +33,7 @@ export const posts = [
         tags: ["Tech", "Git", "GitLab", "GitHub"]
     },
     {
+        id:2,
         file: "setup-a-laravel-project-you-cloned-from-github",
         date: "Jan 29, 2025",
         type: "html",
@@ -48,6 +50,7 @@ export const posts = [
         tags: ["Tech", "Git", "Laravel"]
     },
     {
+        id:3,
         file: "install-spring-boot",
         date: "Jan 29, 2025",
         type: "html",
@@ -64,6 +67,7 @@ export const posts = [
         tags: ["Tech", "Scoop", "Spring boot", "Java"]
     },
     {
+        id:4,
         file: "transfer-repositories-from-gitlab-to-github",
         date: "Jan 29, 2025",
         type: "html",

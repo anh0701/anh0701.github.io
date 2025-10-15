@@ -1,264 +1,192 @@
 import { posts } from './posts.js';
 import { translations } from './translations.js';
 
-let currentLang = localStorage.getItem("lang") || "en";
-let theme = localStorage.getItem("theme") || 'dark';
+let lang = "en";
+const userLang = navigator.language || navigator.userLanguage;
+if (userLang.startsWith("vi")) lang = "vi";
+console.log(userLang);
 
-document.addEventListener("DOMContentLoaded", () => {
-  initTheme();
-  setupMobileMenu();
-  setupToggleLang();
-  // setupToggleTheme();
-  translateUI();
+const postList = document.getElementById("posts");
+const postDetail = document.getElementById("post-detail");
+const relatedContainer = document.getElementById("related-posts");
+const loadMoreBtn = document.getElementById("load-more");
 
-  renderPostsList();
-  renderLastPosts();
-  loadPostFromURL();
-});
+const postsPerPage = 3;
+let currentIndex = 0; 
 
-/* ======= FUNCTIONS ======= */
 
-function setupMobileMenu() {
-  const menuToggle = document.getElementById("menu-toggle");
-  const nav = document.querySelector("header nav");
-
-  if (!menuToggle || !nav) return; 
-
-  menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
+function formatDate(dateStr, lang) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString(lang, {
+    year: "numeric",
+    month: "short",
+    day: "2-digit"
   });
 }
 
-function getCurrentLang() {
-  return localStorage.getItem("lang") || "en";
+function renderPosts() {
+  postList.innerHTML = "";
+
+  posts.forEach(post => {
+    const div = document.createElement("div");
+    div.classList.add("post");
+
+    div.innerHTML = `
+      <img src="${post.image}" alt="${post.title[lang]}">
+      <h3><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h3>
+      <p class="date"> <span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
+      <p class="excerpt">${post.excerpt[lang]}</p>
+      <div class="tags">
+        ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+      </div>
+    `;
+
+    postList.appendChild(div);
+  });
+
+  attachDetailEvents(); 
+}
+
+function renderRelatedPosts() {
+  if (!relatedContainer) return;
+
+  relatedContainer.innerHTML = "";
+  // const shuffled = [...posts].sort(() => 0.5 - Math.random());
+  // const selected = shuffled.slice(0, 3);
+
+  const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const selected = sorted.slice(0, 3);
+
+  selected.forEach(post => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span class="date"> <span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</span>
+      <span class="sep">»</span>
+      <a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a>
+    `;
+    relatedContainer.appendChild(li);
+  });
+
+  attachDetailEvents(); 
+}
+
+async function loadPostContent(post) {
+  try {
+    const filePath = `asset/posts/${post.file}.${lang}.${post.type}`;
+    const res = await fetch(filePath);
+    
+    if (!res.ok) throw new Error("Không tìm thấy file");
+
+    let content = await res.text();
+
+    if (post.type === "md") {
+      content = marked.parse(content);
+    }
+
+    postList.style.display = "none";
+    loadMoreBtn.style.display = "none";
+    if (relatedContainer) relatedContainer.parentElement.style.display = "none";
+
+    postDetail.innerHTML = `
+      <p class="date"><span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
+      <div class="post-body">${content}</div>
+      <button id="back-btn">⬅ ${lang === "vi" ? "Quay lại" : "Back"}</button>
+    `;
+    postDetail.style.display = "block";
+
+    document.getElementById("back-btn").addEventListener("click", () => {
+      postDetail.style.display = "none";
+      postList.style.display = "block";
+      loadMoreBtn.style.display = "block";
+      if (relatedContainer) relatedContainer.parentElement.style.display = "block";
+    });
+
+  } catch (err) {
+    postDetail.innerHTML = `<p>${lang === "vi" ? "Lỗi tải nội dung." : "Failed to load content."}</p>`;
+  }
+}
+
+
+function attachDetailEvents() {
+  document.querySelectorAll(".post-link").forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const post = posts.find(p => p.id == link.dataset.id);
+      if (post) loadPostContent(post);
+    });
+  });
+}
+
+// function renderPostsBatch() {
+//     const nextIndex = currentIndex + postsPerPage;
+//     const batch = posts.slice(currentIndex, nextIndex);
+  
+//     batch.forEach(post => {
+//       const div = document.createElement("div");
+//       div.classList.add("post");
+//       div.innerHTML = `
+//         <img src="${post.image}" alt="${post.title[lang]}">
+//         <h2>${post.title[lang]}</h2>
+//         <p class="date">📅 ${formatDate(post.date)}</p>
+//         <p class="excerpt">${post.excerpt[lang]}</p>
+//       `;
+//       postList.appendChild(div);
+//     });
+  
+//     currentIndex = nextIndex;
+  
+//     if (currentIndex >= posts.length) {
+//       loadMoreBtn.style.display = "none";
+//     }
+//   }
+
+function renderPostsBatch() {
+  const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const nextIndex = currentIndex + postsPerPage;
+  const batch = sorted.slice(currentIndex, nextIndex);
+
+  batch.forEach(post => {
+    const div = document.createElement("div");
+    div.classList.add("post");
+    div.innerHTML = `
+      <img src="${post.image}" alt="${post.title[lang]}">
+      <h3><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h3>
+      <p class="date"><span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
+      <p class="excerpt">${post.excerpt[lang]}</p>
+      <div class="tags">
+        ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+      </div>
+    `;
+    postList.appendChild(div);
+  });
+
+  attachDetailEvents();
+
+  currentIndex = nextIndex;
+
+  if (currentIndex >= posts.length) {
+    loadMoreBtn.style.display = "none";
+  }
 }
 
 function translateUI() {
-  // document.getElementById('about_intro').innerHTML = translations[lang].intro;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     // el.textContent = translations[currentLang][key];
-    el.innerHTML = translations[currentLang][key];
+    el.innerHTML = translations[lang][key];
   });
 }
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  // renderPosts();
+  renderRelatedPosts();
 
-function setupToggleLang() {
-  const buttons = document.querySelectorAll(".toggle-lang");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      currentLang = currentLang === "en" ? "vi" : "en";
-      localStorage.setItem("lang", currentLang);
-      translateUI();
-      renderPostsList();
-      renderLastPosts();
-      loadPostFromURL();
-    });
+  renderPostsBatch();
+  
+  loadMoreBtn.addEventListener("click", () => {
+    renderPostsBatch();
   });
-}
-
-function initTheme() {
-
-  if (theme === "dark") {
-    document.body.classList.add("dark");
-  } else {
-    document.body.classList.remove("dark");
-  }
-
-  document.querySelectorAll(".toggle-theme").forEach(btn => {
-    btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-  });
-
-  setupToggleTheme();
-}
-
-
-
-function setupToggleTheme() {
-  const btn = document.querySelectorAll(".toggle-theme");
-  btn.forEach(btn => {
-    btn.addEventListener("click", () => {
-
-      document.body.classList.toggle("dark");
-
-      if( document.body.classList.contains("dark")){
-        theme = "dark";
-      } else{
-        theme = "light";
-      }
-
-      localStorage.setItem(
-        "theme",
-        theme
-      );
-
-      document.querySelectorAll(".toggle-theme").forEach(b => {
-        b.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-      });
-
-    });
-  });
-}
-
-
-function renderPostsList() {
-  const postsList = document.getElementById("posts-list");
-  if (!postsList) return;
-
-  postsList.innerHTML = "";
-
-  [...posts].reverse().forEach(p => {
-    const div = document.createElement("div");
-    div.className = "card";
-    const tagsHtml = p.tags && p.tags.length
-      ? `<div class="card-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join(" ")}</div>`
-      : "";
-
-    div.innerHTML = `
-      <img src="${p.image}" alt="${p.title[currentLang]}" class="card-img"/>
-      <a href="post.html?file=${p.file}" class="card-title">${p.title[currentLang]}</a>
-      <p class="card-meta">
-        <span class="material-symbols-outlined">person</span> ${p.author} &nbsp; 
-        <span class="material-symbols-outlined">calendar_month</span> ${new Date(p.date).toLocaleDateString(currentLang)}
-      </p>
-      <p class="card-excerpt">${p.excerpt[currentLang] || ""}</p>
-      ${tagsHtml}
-    `;
-    postsList.appendChild(div);
-  });
-}
-
-function getLastThree(arr) {
-  if (!Array.isArray(arr)) return [];
-  return arr.slice(-3).reverse();
-}
-
-function renderLastPosts() {
-  const postsListLast = document.getElementById("posts-list-last");
-  if (!postsListLast) return;
-
-  postsListLast.innerHTML = "";
-
-  const lastPosts = getLastThree(posts);
-
-  lastPosts.forEach(p => {
-    const div = document.createElement("div");
-    div.className = "card";
-    const tagsHtml = p.tags && p.tags.length
-      ? `<div class="card-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join(" ")}</div>`
-      : "";
-
-    div.innerHTML = `
-      <img src="${p.image}" alt="${p.title[currentLang]}" class="card-img"/>
-      <a href="post.html?file=${p.file}" class="card-title">${p.title[currentLang]}</a>
-      <p class="card-meta">
-        <span class="material-symbols-outlined">person</span> ${p.author} &nbsp; 
-        <span class="material-symbols-outlined">calendar_month</span> ${new Date(p.date).toLocaleDateString(currentLang)}
-      </p>
-      <p class="card-excerpt">${p.excerpt[currentLang] || ""}</p>
-      ${tagsHtml}
-    `;
-    postsListLast.appendChild(div);
-  });
-}
-
-function loadPostFromURL() {
-  const postContent = document.getElementById("post-content");
-  if (!postContent) return;
-
-  const params = new URLSearchParams(window.location.search);
-  const fileBase = params.get("file");
-  if (!fileBase) return;
-
-  loadPost(fileBase);
-}
-
-
-function loadPost(fileBase) {
-  const postDiv = document.getElementById("post-content");
-  if (!postDiv) return;
-
-  const post = posts.find(p => p.file === fileBase);
-  if (!post) return;
-
-  const ext = post.type || "md";
-
-  const messages = {
-    en: { noTranslation: "⚠️ No translation available.", loadError: "⚠️ Error loading post." },
-    vi: { noTranslation: "⚠️ Không có bản dịch.", loadError: "⚠️ Lỗi tải bài viết." }
-  };
-
-  const tryLoad = (lang) => fetch(`asset/posts/${fileBase}.${lang}.${ext}`).then(res => {
-    if (!res.ok) throw new Error("No file");
-    return res.text();
-  });
-
-  tryLoad(currentLang)
-    .catch(() => {
-      const fallbackLang = currentLang === "en" ? "vi" : "en";
-      return tryLoad(fallbackLang).then(txt => {
-        // currentLang = fallbackLang;
-        // localStorage.setItem("lang", currentLang);
-        translateUI();
-        return txt;
-      });
-    })
-    .then(txt => {
-      if (txt) {
-        if (ext === "html") {
-          postDiv.innerHTML = txt;
-        } else {
-          postDiv.innerHTML = marked.parse(txt);
-        }
-        updateBreadcrumb(fileBase);
-      } else {
-        postDiv.innerHTML = `<p>${messages[currentLang].noTranslation}</p>`;
-      }
-    })
-    .catch(err => {
-      console.error(err);
-      postDiv.innerHTML = `<p>${messages[currentLang].loadError}</p>`;
-    });
-}
-
-
-function updateBreadcrumb(fileBase) {
-  const breadcrumb = document.querySelector(".breadcrumb");
-  if (!breadcrumb) return;
-
-  breadcrumb.innerHTML = "";
-
-  const homeLink = document.createElement("a");
-  homeLink.href = "index.html";
-  homeLink.setAttribute("data-i18n", "home");
-  breadcrumb.appendChild(homeLink);
-
-  breadcrumb.appendChild(document.createTextNode(" › "));
-
-  const postsLink = document.createElement("a");
-  postsLink.href = "posts.html";
-  postsLink.setAttribute("data-i18n", "posts");
-  breadcrumb.appendChild(postsLink);
-
-  breadcrumb.appendChild(document.createTextNode(" › "));
-
-  const post = posts.find(p => p.file === fileBase);
-  const span = document.createElement("span");
-
-  if (post) {
-    span.textContent = post.title[currentLang];
-    document.title = post.title[currentLang];
-  } else {
-    span.textContent = currentLang === "en"
-      ? `Not found: ${fileBase}`
-      : `Không tìm thấy: ${fileBase}`;
-    document.title = span.textContent;
-  }
-
-  breadcrumb.appendChild(span);
 
   translateUI();
-}
-
-
+});
