@@ -7,12 +7,12 @@
   <script src="asset/script.js" type="module"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  
+  <script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 <body>
   <header>
-    <h1 data-i18n="blogTitle"><a href="index.html">My Blog</a></h1>
+    <h2 data-i18n="blogTitle"><a href="index.html">My Blog</a></h2>
     <div id="menu-toggle">☰</div>
     <nav>
       <a data-i18n="home" href="index.html">Home</a>
@@ -33,10 +33,10 @@
   </header>
   
   <main>
-    <h1 data-i18n="about_title">About Me</h1>
+    <h2 data-i18n="about_title">About Me</h2>
         <p data-i18n="about_intro"></p>
 
-        <h2 data-i18n="skills_title">Skills & Interests</h2>
+        <h3 data-i18n="skills_title">Skills & Interests</h3>
         <ul>
           <li><strong>Frontend:</strong> HTML, CSS, TypeScript, JavaScript, Angular, React</li>
           <li><strong>Backend:</strong> Spring boot, Laravel RESTful APIs, MySQL, PostgreSQL</li>
@@ -44,8 +44,18 @@
           <li><strong>Other:</strong> Problem Solving, Debugging</li>
         </ul>
 
-        <h2 data-i18n="contact_title">Contact</h2>
-        <p>Email: <a style="color: var(--link);" href="mailto:quynhanhphamthi01@example.com">quynhanhphamthi01@example.com</a></p>
+        <h3 data-i18n="contact_title">Contact</h3>
+        <div class="contact-icons">
+          <a href="mailto:quynhanhphamthi01@gmail.com" class="mail" aria-label="Email">
+            <i data-lucide="mail"></i>
+          </a>
+          <a href="https://github.com/anh0701" target="_blank" class="github" aria-label="GitHub">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://gitlab.com/anh0701" target="_blank" class="gitlab" aria-label="GitLab">
+            <i data-lucide="gitlab"></i>
+          </a>
+        </div>
   
   </main>
   
@@ -53,5 +63,9 @@
   <footer>
     <p>&copy; 2025 Anh's Blog. All rights reserved.</p>
   </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
