@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="asset/style-posts.css">
     <!-- <title>Spring Boot Setup Guide</title> -->
 </head>
-<body id="body-posts">
-    <p></p>
+<body  >
+    <h2 style="text-align: center; color:  #8ab4f8; margin-bottom:3%;">Cách cài đặt Spring boot</h2>
     
     <img class="post-image" src="asset/images/spring-boot.png" alt="Image">
+
+    <h3>1. Windows</h3>
     
     <p>Bước 1: Cài đặt Scoop</p>
     <pre><code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code></pre>
@@ -21,5 +23,19 @@
     
     <p>Bước 3: Cài đặt IntelliJ IDEA Ultimate</p>
     <pre><code>scoop install extras/idea-ultimate</code></pre>
+
+    <h3>2. Linux</h3>
+    <p>Bước 1: Cài đặt zip, unzip, curl:</p>
+    <pre><code> sudo apt install unzip zip curl</code></pre>
+    <p>Bước 2: Cài đặt sdkman: </p>
+    <pre><code>curl -s "https://get.sdkman.io" | bash</code></pre>
+    <pre><code>source "$HOME/.sdkman/bin/sdkman-init.sh"</code></pre>
+    <pre><code>sdk version</code></pre>
+    <p>Bước 3: Cài đặt gradle, maven, ... bằng sdkman</p>
+    <pre><code>sdk install java 21.0.8-tem</code></pre>   
+    <pre><code>sdk install gradle</code></pre> 
+    <pre><code>sdk install maven</code></pre>
+    <pre><code>sdk install springboot</code></pre>   
+    
 </body>
 </html
