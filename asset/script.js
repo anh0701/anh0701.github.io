@@ -12,7 +12,7 @@ const relatedContainer = document.getElementById("related-posts");
 const loadMoreBtn = document.getElementById("load-more");
 
 const postsPerPage = 3;
-let currentIndex = 0; 
+let currentIndex = 0;
 
 
 function formatDate(dateStr, lang) {
@@ -44,7 +44,7 @@ function renderPosts() {
     postList.appendChild(div);
   });
 
-  attachDetailEvents(); 
+  attachDetailEvents();
 }
 
 function renderRelatedPosts() {
@@ -67,14 +67,14 @@ function renderRelatedPosts() {
     relatedContainer.appendChild(li);
   });
 
-  attachDetailEvents(); 
+  attachDetailEvents();
 }
 
 async function loadPostContent(post) {
   try {
     const filePath = `asset/posts/${post.file}.${lang}.${post.type}`;
     const res = await fetch(filePath);
-    
+
     if (!res.ok) throw new Error("Không tìm thấy file");
 
     let content = await res.text();
@@ -90,9 +90,25 @@ async function loadPostContent(post) {
     postDetail.innerHTML = `
       <p class="date"><span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
       <div class="post-body">${content}</div>
-      <button id="back-btn">⬅ ${lang === "vi" ? "Quay lại" : "Back"}</button>
+      <div class="post-footer">
+        <button id="back-btn" class="back-btn"> < ${lang === "vi" ? "Quay lại" : "Back"}</button>
+      </div>
     `;
     postDetail.style.display = "block";
+
+    const backBtn = document.getElementById("back-btn");
+    const contentSide = document.querySelector(".content");
+    let hideTimer;
+
+    contentSide.addEventListener("scroll", () => {
+      backBtn.classList.add("visible");
+      clearTimeout(hideTimer);
+
+
+      hideTimer = setTimeout(() => {
+        backBtn.classList.remove("visible");
+      }, 3000)
+    });
 
     document.getElementById("back-btn").addEventListener("click", () => {
       postDetail.style.display = "none";
@@ -120,7 +136,7 @@ function attachDetailEvents() {
 // function renderPostsBatch() {
 //     const nextIndex = currentIndex + postsPerPage;
 //     const batch = posts.slice(currentIndex, nextIndex);
-  
+
 //     batch.forEach(post => {
 //       const div = document.createElement("div");
 //       div.classList.add("post");
@@ -132,9 +148,9 @@ function attachDetailEvents() {
 //       `;
 //       postList.appendChild(div);
 //     });
-  
+
 //     currentIndex = nextIndex;
-  
+
 //     if (currentIndex >= posts.length) {
 //       loadMoreBtn.style.display = "none";
 //     }
@@ -183,10 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
   renderRelatedPosts();
 
   renderPostsBatch();
-  
+
   loadMoreBtn.addEventListener("click", () => {
     renderPostsBatch();
   });
 
   translateUI();
 });
+
