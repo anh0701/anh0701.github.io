@@ -83,5 +83,22 @@ export const posts = [
         author: "Anh",
         tags: ["Tech", "Git", "GitLab", "GitHub"]
     },
+    {
+        id: 5,
+        file: "my-persional-project",
+        date: "Dec 28, 2025",
+        type: "html",
+        title: {
+            vi: "Các Dự Án Web Cá Nhân Tôi Đã Và Đang Thực Hiện",
+            en: "My Personal Web Projects"
+        },
+        excerpt: {
+            en: "",
+            vi: ""
+        }, 
+        image: "",
+        author: "Anh",
+        tags: ["projects"]
+    } 
     
 ];

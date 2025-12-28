@@ -32,7 +32,7 @@ function renderPosts() {
     div.classList.add("post");
 
     div.innerHTML = `
-      <img src="${post.image}" alt="${post.title[lang]}">
+      <img src="${post.image}">
       <h3><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h3>
       <p class="date"> <span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
       <p class="excerpt">${post.excerpt[lang]}</p>
@@ -91,34 +91,51 @@ async function loadPostContent(post) {
       <p class="date"><span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
       <div class="post-body">${content}</div>
       <div class="post-footer">
-        <button id="back-btn" class="back-btn"> < ${lang === "vi" ? "Quay lại" : "Back"}</button>
+        <button class="back-to-posts back-btn">${lang === "vi" ? "Quay lại" : "Back"}</button>
+        <button id="back-btn" > ↑ </button>
       </div>
     `;
     postDetail.style.display = "block";
 
     const backBtn = document.getElementById("back-btn");
     const contentSide = document.querySelector(".content");
-    let hideTimer;
+    // let hideTimer;
 
-    contentSide.addEventListener("scroll", () => {
-      backBtn.classList.add("visible");
-      clearTimeout(hideTimer);
+    // contentSide.addEventListener("scroll", () => {
+    //   backBtn.classList.add("visible");
+    //   clearTimeout(hideTimer);
 
 
-      hideTimer = setTimeout(() => {
-        backBtn.classList.remove("visible");
-      }, 3000)
+    //   hideTimer = setTimeout(() => {
+    //     backBtn.classList.remove("visible");
+    //   }, 3000)
+    // });
+
+    backBtn.classList.add("visible");
+
+    backBtn.addEventListener("click", () => {
+      contentSide.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
 
-    document.getElementById("back-btn").addEventListener("click", () => {
-      postDetail.style.display = "none";
-      postList.style.display = "block";
-      loadMoreBtn.style.display = "block";
-      if (relatedContainer) relatedContainer.parentElement.style.display = "block";
+
+    document.querySelectorAll(".back-to-posts").forEach(btn => {
+      btn.addEventListener("click", () => {
+        postDetail.style.display = "none";
+        postList.style.display = "block";
+        loadMoreBtn.style.display = "block";
+        if (relatedContainer)
+          relatedContainer.parentElement.style.display = "block";
+      });
     });
+
+
+
 
   } catch (err) {
-    postDetail.innerHTML = `<p>${lang === "vi" ? "Lỗi tải nội dung." : "Failed to load content."}</p>`;
+    postDetail.innerHTML = `<p>${lang === "vi" ? "Lỗi tải nội dung." : "Failed to load content." + err}</p>`;
   }
 }
 
@@ -165,7 +182,7 @@ function renderPostsBatch() {
     const div = document.createElement("div");
     div.classList.add("post");
     div.innerHTML = `
-      <img src="${post.image}" alt="${post.title[lang]}">
+      <img src="${post.image}">
       <h3><a href="#" class="post-link" data-id="${post.id}">${post.title[lang]}</a></h3>
       <p class="date"><span class="material-symbols-outlined">calendar_month</span> ${formatDate(post.date, lang)}</p>
       <p class="excerpt">${post.excerpt[lang]}</p>
