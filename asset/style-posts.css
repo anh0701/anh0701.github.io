@@ -3,7 +3,7 @@ h1 {
     line-height: 40px;
 }
 
-p {
+li, p, a {
     margin: 0 0 20px 0;
     font-size: 15px;
 }
@@ -56,4 +56,10 @@ pre > code {
   font-size: 14px;
   line-height: 1.5;
   white-space: pre;
+}
+
+.title-post{
+  text-align: center; 
+  color:  #8ab4f8; 
+  margin-bottom:3%;
 }
