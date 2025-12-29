@@ -99,6 +99,23 @@ export const posts = [
         image: "",
         author: "Anh",
         tags: ["projects"]
-    } 
+    },
+    {
+        id: 6,
+        file: "redis",
+        date: "Dec 29, 2025",
+        type: "md",
+        title: {
+            vi: "Redis",
+            en: "Redis"
+        },
+        excerpt: {
+            en: "",
+            vi: ""
+        },
+        image: "asset/images/redis.png",
+        author: "Anh",
+        tags: ["tech", "redis"]
+    }, 
     
 ];
