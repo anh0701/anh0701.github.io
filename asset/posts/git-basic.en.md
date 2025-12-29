@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="asset/style-posts.css">
+
 <h2 style="text-align: center; color:  #8ab4f8; margin-bottom:3%;">Git Quick Start</h2>
 
 1. Git vs Github, Gitlab
@@ -23,4 +25,3 @@
     - **git branch**: Lists all branches in the repository.
     - **git checkout**: Switches to a different branch.
     - **git merge**: Merges changes from one branch into another.
-
