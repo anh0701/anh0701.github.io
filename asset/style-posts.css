@@ -95,3 +95,15 @@ th {
   background-color: #04AA6D;
   color: white;
 }
+
+.section-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #e0e0e0,
+        transparent
+    );
+    margin: 40px 0;
+}
