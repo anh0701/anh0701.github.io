@@ -107,3 +107,8 @@ th {
     );
     margin: 40px 0;
 }
+
+.container_p {
+  display: flex;
+  gap: 20px; 
+}
