@@ -3,7 +3,8 @@ import Section from "@/components/common/Section"
 export default function About() {
   return (
     <Section id="about" title="About Me">
-      <div className="space-y-4 text-gray-600 leading-relaxed">
+
+      <div className="space-y-4 text-gray-600 leading-relaxed ml-1 mr-1">
 
         <p className="indent-6">
           Hi,
