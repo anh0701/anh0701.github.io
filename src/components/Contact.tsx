@@ -32,7 +32,7 @@ export default function Contact() {
         <ContactCard 
           href="https://github.com/anh0701"
           title="GitHub"
-          description="https://github.com/anh0701"
+          description="github.com/anh0701"
           isExternal={true}
           iconClass="bg-slate-100 text-slate-800 group-hover:bg-black"
           icon={
@@ -45,7 +45,7 @@ export default function Contact() {
         <ContactCard 
           href="https://www.linkedin.com/in/anh0701/"
           title="LinkedIn"
-          description="https://www.linkedin.com/in/anh0701/"
+          description="linkedin.com/in/anh0701/"
           isExternal={true}
           iconClass="bg-blue-50 text-blue-700 group-hover:bg-[#0077b5]"
           icon={
