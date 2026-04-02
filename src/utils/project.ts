@@ -7,6 +7,12 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "SmartCheck",
+    desc: "Pre-process and Post-process Quality Inspection",
+    techs: ["YOLOv8", "Python", "CustomTkinter", "PostgreSQL"],
+    url: "https://github.com/anh0701/SmartCheck",
+  },
+  {
     title: "MES Dispatching Board",
     desc: "Centralized hub for real-time shop-floor control. Synchronizing labor, machinery, and materials for seamless production execution.",
     techs: [".NET", "Blazor", "MSSQL", "Docker"],
@@ -48,4 +54,23 @@ export const projects: Project[] = [
     techs: ["TypeScript", "React"],
     url: "https://github.com/anh0701/what-choice",
   },
+  {
+    title: "Study with Me",
+    desc: "A collection of study notes and learning materials",
+    techs: ["Tech", "Note"],
+    url: "https://github.com/anh0701/study-with-me",
+  },
+  {
+    title: "Language Learning Web",
+    desc: "A language learning web application that helps users practice vocabulary and grammar through interactive quizzes. ",
+    techs: ["html", "css", "js"],
+    url: "https://github.com/anh0701/foreign-language",
+  },
+  {
+    title: "Dev Tool",
+    desc: "Useful tools for developers.",
+    techs: ["html", "css", "js"],
+    url: "https://github.com/anh0701/dev-tool",
+  },
+
 ]

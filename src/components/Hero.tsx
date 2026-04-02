@@ -8,7 +8,7 @@ export default function Hero() {
         bg-gradient-to-b from-indigo-50 via-white to-white">
       <div className="px-6 max-w-6xl mx-auto w-full">
         <div className="max-w-xl">
-          <h1 className="text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl font-bold mb-6 leading-tight">
             Hi all, I'm Anh <span className="inline-block">👋</span>
           </h1>
 
