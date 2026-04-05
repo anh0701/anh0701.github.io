@@ -12,8 +12,8 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <Hero />
-      <Projects />
       <About />
+      <Projects />
       {/* <Resume /> */}
       <Contact />
     </div>

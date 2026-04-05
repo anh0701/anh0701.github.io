@@ -19,7 +19,7 @@ export default function Resume() {
               <span className="text-sm text-slate-400 font-medium">{note.readTime}</span>
             </div>
 
-            <h3 className="text-2xl font-bold text-slate-900 
+            <h3 className="heading-3 font-bold text-slate-900 
               group-hover:text-blue-600 transition-colors leading-tight">
               <a href={note.gistUrl} target="_blank" rel="noreferrer" 
                 className="flex items-center justify-between gap-4">
@@ -30,7 +30,7 @@ export default function Resume() {
               </a>
             </h3>
 
-            <p className="mt-4 text-slate-600 leading-relaxed text-base md:text-lg">
+            <p className="mt-4 text-slate-600 leading-relaxed body-text">
               {note.excerpt}
             </p>
 

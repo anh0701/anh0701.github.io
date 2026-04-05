@@ -38,8 +38,8 @@ const ContactCard: React.FC<ContactCardProps> = ({
         {icon}
       </div>
       
-      <h3 className="font-bold text-slate-800">{title}</h3>
-      <p className="text-sm text-slate-500 mt-1">{description}</p>
+      <h3 className="heading-3 font-bold text-slate-800">{title}</h3>
+      <p className="body-text text-slate-500 mt-1">{description}</p>
     </a>
   );
 };

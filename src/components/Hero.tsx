@@ -4,15 +4,15 @@ import Section from "./common/Section"
 
 export default function Hero() {
   return (
-    <Section id="home" title="" className="min-h-[90] mx-auto
+    <Section id="home" title="" className="min-h-[80vh] flex items-center mx-auto
         bg-gradient-to-b from-indigo-50 via-white to-white">
       <div className="px-6 max-w-6xl mx-auto w-full">
         <div className="max-w-xl">
-          <h1 className="text-5xl font-bold mb-6 leading-tight">
+          <h1 className="heading-hero font-bold mb-6 leading-tight">
             Hi all, I'm Anh <span className="inline-block">👋</span>
           </h1>
 
-          <p className="text-gray-500 max-w-2xl text-lg leading-relaxed mb-8">
+          <p className="text-gray-500 max-w-2xl body-large leading-relaxed mb-8">
             Software Developer | Java-based Backend. 
             Currently exploring .NET, Python, and Flutter. 
             Enthusiast in Image Processing and system optimization.

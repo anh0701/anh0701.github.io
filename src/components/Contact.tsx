@@ -6,10 +6,10 @@ export default function Contact() {
     <Section id="contact" title="Contact">
 
       <div className="mb-12 border-l-4 border-blue-500 pl-5">
-        <h3 className="text-xl font-bold text-slate-800 tracking-wider">
+        <h3 className="heading-3 font-bold text-slate-800 tracking-wider">
           Let’s Build Something Together
         </h3>
-        <p className="text-slate-500 mt-2">
+        <p className="text-slate-500 mt-2 body-text">
           Currently open to new opportunities and interesting projects. Drop me a line!
         </p>
       </div>

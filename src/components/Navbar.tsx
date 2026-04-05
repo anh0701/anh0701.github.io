@@ -13,7 +13,7 @@ export default function Navbar() {
         <img className="rounded-full h-8 md:h-9 w-auto" src="/avatar.png" alt="Logo" />
       </button>
 
-      <div className="flex gap-4 md:gap-8 text-xs sm:text-sm md:text-base font-medium">
+      <div className="flex gap-4 md:gap-6 text-sm md:text-base font-medium">
 
         {navItems.map((item) => (
           <button
