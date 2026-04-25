@@ -9,7 +9,7 @@ export const projects: Project[] = [
   {
     title: "SmartCheck",
     desc: "Pre-process and Post-process Quality Inspection",
-    techs: ["YOLOv8", "Python", "CustomTkinter", "PostgreSQL"],
+    techs: ["YOLOv8", "Python", "HTML", "CSS", "PostgreSQL"],
     url: "https://github.com/anh0701/SmartCheck",
   },
   {
@@ -37,6 +37,30 @@ export const projects: Project[] = [
     url: "https://github.com/anh0701/recorder-a",
   },
   {
+    title: "What to Eat Today?",
+    desc: "Decide smart, eat well. Perfect meal recommendations tailored just for you.",
+    techs: ["TypeScript", "React", "json"],
+    url: "https://github.com/anh0701/what-choice",
+  },
+  {
+    title: "Study with Me",
+    desc: "A collection of study notes and learning materials",
+    techs: ["Tech", "Note", "markdown", "just the docs"],
+    url: "https://github.com/anh0701/study-with-me",
+  },
+  {
+    title: "Language Learning Web",
+    desc: "A language learning web application that helps users practice vocabulary and grammar through interactive quizzes. ",
+    techs: ["html", "css", "js", "json"],
+    url: "https://github.com/anh0701/foreign-language",
+  },
+  {
+    title: "Dev Tool",
+    desc: "Useful tools for developers.",
+    techs: ["html", "css", "js"],
+    url: "https://github.com/anh0701/dev-tool",
+  },
+  {
     title: "PL/SQL Parser",
     desc: "A PL/SQL syntax analysis project built with ANTLR4 ",
     techs: ["Python", "ANTLR4", "Flask"],
@@ -47,30 +71,6 @@ export const projects: Project[] = [
     desc: "Command line tool create project spring boot. ",
     techs: ["Shell", "PowerShell"],
     url: "https://github.com/anh0701/sbi-cli",
-  },
-  {
-    title: "What to Eat Today?",
-    desc: "Decide smart, eat well. Perfect meal recommendations tailored just for you.",
-    techs: ["TypeScript", "React"],
-    url: "https://github.com/anh0701/what-choice",
-  },
-  {
-    title: "Study with Me",
-    desc: "A collection of study notes and learning materials",
-    techs: ["Tech", "Note"],
-    url: "https://github.com/anh0701/study-with-me",
-  },
-  {
-    title: "Language Learning Web",
-    desc: "A language learning web application that helps users practice vocabulary and grammar through interactive quizzes. ",
-    techs: ["html", "css", "js"],
-    url: "https://github.com/anh0701/foreign-language",
-  },
-  {
-    title: "Dev Tool",
-    desc: "Useful tools for developers.",
-    techs: ["html", "css", "js"],
-    url: "https://github.com/anh0701/dev-tool",
   },
 
 ]

@@ -10,7 +10,7 @@ export default function Navbar() {
         px-6 md:px-10">
       
       <button className="shrink-0" onClick={() => scrollToId("home")}>
-        <img className="rounded-full h-8 md:h-9 w-auto" src="/avatar.png" alt="Logo" />
+        <img className="rounded-full h-8 md:h-9 w-auto cursor-pointer" src="/avatar.png" alt="Logo" />
       </button>
 
       <div className="flex gap-4 md:gap-6 text-sm md:text-base font-medium">

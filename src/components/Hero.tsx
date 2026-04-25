@@ -9,7 +9,8 @@ export default function Hero() {
       <div className="px-6 max-w-6xl mx-auto w-full">
         <div className="max-w-xl">
           <h1 className="heading-hero font-bold mb-6 leading-tight">
-            Hi all, I'm Anh <span className="inline-block">👋</span>
+            Hi all, I'm Anh 
+            {/* <span className="inline-block">👋</span> */}
           </h1>
 
           <p className="text-gray-500 max-w-2xl body-large leading-relaxed mb-8">
