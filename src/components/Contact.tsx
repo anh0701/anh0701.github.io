@@ -3,13 +3,13 @@ import Section from "./common/Section";
 
 export default function Contact() {
   return (
-    <Section id="contact" title="Contact">
+    <Section id="contact" title="Contact" className="max-w-6xl mx-auto px-6">
 
       <div className="mb-12 border-l-4 border-blue-500 pl-5">
-        <h3 className="text-xl font-bold text-slate-800 tracking-wider">
+        <h3 className="heading-3 font-bold text-slate-800 tracking-wider dark:text-white">
           Let’s Build Something Together
         </h3>
-        <p className="text-slate-500 mt-2">
+        <p className="text-slate-500 mt-2 body-text dark:text-slate-400 ">
           Currently open to new opportunities and interesting projects. Drop me a line!
         </p>
       </div>
@@ -32,7 +32,7 @@ export default function Contact() {
         <ContactCard 
           href="https://github.com/anh0701"
           title="GitHub"
-          description="https://github.com/anh0701"
+          description="github.com/anh0701"
           isExternal={true}
           iconClass="bg-slate-100 text-slate-800 group-hover:bg-black"
           icon={
@@ -45,7 +45,7 @@ export default function Contact() {
         <ContactCard 
           href="https://www.linkedin.com/in/anh0701/"
           title="LinkedIn"
-          description="https://www.linkedin.com/in/anh0701/"
+          description="linkedin.com/in/anh0701/"
           isExternal={true}
           iconClass="bg-blue-50 text-blue-700 group-hover:bg-[#0077b5]"
           icon={

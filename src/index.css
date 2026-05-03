@@ -1,5 +1,60 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
 
 html {
   scroll-behavior: smooth;
+}
+
+@layer components {
+  .heading-1 {
+    @apply text-3xl md:text-5xl;
+  }
+
+  .heading-2 {
+    @apply text-2xl md:text-4xl;
+  }
+
+  .heading-3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  .body-text {
+    @apply text-sm md:text-base text-gray-600 leading-relaxed;
+  }
+
+  .body-large {
+    @apply text-base md:text-lg text-gray-600 leading-relaxed;
+  }
+
+  .heading-hero {
+    @apply text-4xl md:text-6xl font-bold tracking-tight;
+  }
+
+  .caption {
+    @apply text-xs md:text-sm text-gray-400;
+  }
+}
+
+@layer utilities {
+  @keyframes twinkle {
+    0% {
+      opacity: 0.3;
+    }
+
+    25% {
+      opacity: 0.6;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    75% {
+      opacity: 0.6;
+    }
+
+    100% {
+      opacity: 0.3;
+    }
+  }
 }

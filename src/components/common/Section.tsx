@@ -2,12 +2,13 @@ type Props = {
   id: string
   title: string
   children: React.ReactNode
+  className?: string
 }
 
-export default function Section({ id, title, children }: Props) {
+export default function Section({ id, title, children, className }: Props) {
   return (
-    <section id={id} className="min-h-screen scroll-mt-9 py-20 px-6 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold uppercase mb-10 text-gray-800">
+    <section id={id} className={`scroll-mt-9 py-14 md:py-20 px-6 w-full mx-auto ${className}`}>
+      <h2 className="heading-2 font-bold uppercase mb-10 text-gray-800 dark:text-white">
         {title}
       </h2>
       {children}

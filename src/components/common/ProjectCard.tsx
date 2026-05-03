@@ -20,6 +20,8 @@ export default function ProjectCard({
       className="
         group block rounded-2xl
         bg-white
+        dark:bg-slate-800
+        dark:text-slate-300
         border border-gray-200
         p-6
         shadow-sm
@@ -28,11 +30,11 @@ export default function ProjectCard({
         hover:shadow-xl
       "
     >
-      <h3 className="font-semibold text-lg mb-2 group-hover:text-indigo-600 transition-colors">
+      <h3 className="font-semibold heading-3 mb-2 group-hover:text-indigo-600 transition-colors">
         {title}
       </h3>
 
-      <p className="text-gray-600 mb-4 leading-relaxed">
+      <p className="text-gray-600 mb-4 leading-relaxed caption dark:text-gray-300">
         {desc}
       </p>
 
