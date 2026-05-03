@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
 
 html {
   scroll-behavior: smooth;
@@ -31,5 +32,29 @@ html {
 
   .caption {
     @apply text-xs md:text-sm text-gray-400;
+  }
+}
+
+@layer utilities {
+  @keyframes twinkle {
+    0% {
+      opacity: 0.3;
+    }
+
+    25% {
+      opacity: 0.6;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    75% {
+      opacity: 0.6;
+    }
+
+    100% {
+      opacity: 0.3;
+    }
   }
 }

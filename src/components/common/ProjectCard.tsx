@@ -20,6 +20,8 @@ export default function ProjectCard({
       className="
         group block rounded-2xl
         bg-white
+        dark:bg-slate-800
+        dark:text-slate-300
         border border-gray-200
         p-6
         shadow-sm
@@ -32,7 +34,7 @@ export default function ProjectCard({
         {title}
       </h3>
 
-      <p className="text-gray-600 mb-4 leading-relaxed caption">
+      <p className="text-gray-600 mb-4 leading-relaxed caption dark:text-gray-300">
         {desc}
       </p>
 
