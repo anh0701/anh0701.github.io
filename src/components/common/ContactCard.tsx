@@ -29,13 +29,14 @@ const ContactCard: React.FC<ContactCardProps> = ({
       target={target}
       rel={rel}
       className={`
-    group block p-6 
-    bg-white dark:bg-slate-800
-    border border-slate-100 dark:border-slate-700
-    rounded-2xl shadow-sm 
-    hover:shadow-xl hover:-translate-y-2 
-    dark:hover:shadow-black/30
-    transition-all duration-300 
+      group block p-6 
+      bg-white dark:bg-slate-900
+      border border-slate-100 dark:border-slate-800
+      rounded-2xl shadow-sm 
+      hover:shadow-xl hover:-translate-y-1.5 
+      hover:border-blue-200 dark:hover:border-blue-500/30
+      dark:hover:shadow-blue-500/10
+      transition-all duration-300
     ${className}
   `}
     >
@@ -43,21 +44,22 @@ const ContactCard: React.FC<ContactCardProps> = ({
       <div
         className={`
       w-12 h-12
-      rounded-lg flex items-center justify-center mb-4 
-      text-slate-600 dark:text-slate-500
-      group-hover:text-white 
-      transition-colors 
+      rounded-xl flex items-center justify-center mb-4 
+      transition-all duration-300
+      bg-blue-50 text-blue-600 
+      dark:bg-blue-900/30 dark:text-blue-400
+      group-hover:bg-[#0077b5] group-hover:text-white 
       ${iconClass}
     `}
       >
         {icon}
       </div>
 
-      <h3 className="heading-3 font-bold text-slate-900 dark:text-white">
+      <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-[#0077b5] dark:group-hover:text-blue-400 transition-colors">
         {title}
       </h3>
 
-      <p className="body-text text-slate-600 dark:text-slate-300 mt-1">
+      <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">
         {description}
       </p>
     </a>

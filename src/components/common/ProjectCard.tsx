@@ -19,22 +19,19 @@ export default function ProjectCard({
       target="_blank"
       className="
         group block rounded-2xl
-        bg-white
-        dark:bg-slate-800
-        dark:text-slate-300
-        border border-gray-200
-        p-6
-        shadow-sm
+      bg-white border-gray-200 shadow-sm
+      dark:bg-slate-900 dark:border-slate-800 dark:shadow-2xl/50
+        p-6 border
         transition-all duration-300 ease-out
-        hover:-translate-y-1
-        hover:shadow-xl
+        hover:-translate-y-1 hover:shadow-xl hover:border-indigo-200
+      dark:hover:border-indigo-500/30
       "
     >
-      <h3 className="font-semibold heading-3 mb-2 group-hover:text-indigo-600 transition-colors">
+      <h3 className="font-semibold heading-3 mb-2 text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
         {title}
       </h3>
 
-      <p className="text-gray-600 mb-4 leading-relaxed caption dark:text-gray-300">
+      <p className="text-gray-600 dark:text-slate-400 mb-4 leading-relaxed caption">
         {desc}
       </p>
 
@@ -44,8 +41,9 @@ export default function ProjectCard({
         ))}
       </div>
 
-      <span className="text-indigo-600 font-medium group-hover:underline">
-        View project →
+      <span className="text-indigo-600 dark:text-indigo-400 font-medium flex items-center group-hover:underline">
+        View project
+          <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
       </span>
     </a>
   )
