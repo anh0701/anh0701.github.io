@@ -1,8 +1,10 @@
 import { useTheme } from "@/context/ThemeContext";
-import { navItems, scrollToId } from "@/utils/scroll"
+import useScrollToId, { navItems  } from "@/utils/scroll"
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const scrollToId = useScrollToId();
+  
   return (
     <nav
       className="

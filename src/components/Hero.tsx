@@ -1,12 +1,13 @@
 import Button from "./common/Button"
-import { scrollToId } from "@/utils/scroll"
+import useScrollToId  from "@/utils/scroll"
 import Section from "./common/Section"
 import { useTheme } from "@/context/ThemeContext";
 import Stars from "./Stars";
 
 export default function Hero() {
   const { theme } = useTheme();
-
+  const scrollToId = useScrollToId();
+  
   return (
     <Section
       id="home"
