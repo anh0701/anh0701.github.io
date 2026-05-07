@@ -4,7 +4,7 @@ export default function About() {
   return (
     <Section id="about" title="About Me" className="max-w-6xl mx-auto px-6">
 
-      <div className="space-y-6 text-gray-600 dark:text-slate-400 leading-relaxed max-w-4xl">
+      <div className="space-y-6 text-gray-600 dark:text-slate-400 leading-relaxed">
         <p className="indent-6 body-text">
           Hi, my name is <span className="text-gray-900 dark:text-slate-100 font-medium">Anh</span>,
           and I am a <strong className="text-indigo-600 dark:text-indigo-400 font-semibold">Software Developer </strong>

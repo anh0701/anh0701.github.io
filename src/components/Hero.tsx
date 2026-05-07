@@ -1,12 +1,13 @@
 import Button from "./common/Button"
-import { scrollToId } from "@/utils/scroll"
+import useScrollToId  from "@/utils/scroll"
 import Section from "./common/Section"
 import { useTheme } from "@/context/ThemeContext";
 import Stars from "./Stars";
 
 export default function Hero() {
   const { theme } = useTheme();
-
+  const scrollToId = useScrollToId();
+  
   return (
     <Section
       id="home"
@@ -38,7 +39,19 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4">
-            <Button onClick={() => scrollToId("contact")}>
+            <Button onClick={() => scrollToId("projects")}>
+              Projects
+            </Button>
+            <Button 
+              variant="outline"
+              className="
+                border-indigo-200 text-slate-800 
+                hover:border-indigo-600 hover:shadow-[0_0_10px_rgba(79,70,229,0.2)]
+                dark:border-indigo-500/30 dark:text-indigo-400
+                dark:hover:border-indigo-400
+                rounded-xl
+              "
+              onClick={() => scrollToId("contact")}>
               Contact Me
             </Button>
           </div>
