@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import BlogList from './pages/BlogList';
 import PostDetail from './pages/PostDetail';
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <Router>
         <ScrollToTop />
         <div className="bg-white dark:bg-slate-950 dark:text-white min-h-screen">
           <Navbar />
@@ -22,7 +22,7 @@ function App() {
             <Route path="/blog/:slug" element={<PostDetail />} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </Router>
     </ThemeProvider>
   )
 }
