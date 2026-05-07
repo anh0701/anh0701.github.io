@@ -16,11 +16,22 @@ A portfolio is more than just a gallery of projects; it is a live record of a de
 
 My first version was built using Angular. At the time, my primary goal was to master a robust framework and understand the architecture of Single Page Applications (SPA).
 
-|  |  |  |
-|--|--|--|
-| ![home page](/images/v0.0.0/home.png) | ![home page](/images/v0.0.0/about-me-1.png) | ![home page](/images/v0.0.0/about-me-2.png) |
-| ![home page](/images/v0.0.0/about-me-3.png) | ![home page](/images/v0.0.0/post-1.png) |  |
+```slideshow
+{
+  "images": [
+    "/images/v0.0.0/home.png",
+    "/images/v0.0.0/about-me-1.png",
+    "/images/v0.0.0/about-me-2.png",
+    "/images/v0.0.0/about-me-3.png",
+    "/images/v0.0.0/post-1.png"
+  ],
 
+  "settings": {
+    "autoplay": true,
+    "delay": 2000
+  }
+}
+```
 
 ### Key Achievements:
 
@@ -42,10 +53,23 @@ My first version was built using Angular. At the time, my primary goal was to ma
 
 After realizing Version 1 was over-engineered, I stripped everything down to Vanilla JavaScript.
 
-|  |  |  |
-|--|--|--|
-| ![home page](/images/v1.0.0/home-d.png) | ![home page](/images/v1.0.0/home-l.png) | ![home page](/images/v1.0.0/about-me.png) |
-| ![home page](/images/v1.0.0/post.png) | ![home page](/images/v1.0.0/posts.png) | ![home page](/images/v1.0.0/da-ngon-ngu.png) |
+```slideshow
+{
+  "images": [
+    "/images/v1.0.0/home-l.png",
+    "/images/v1.0.0/home-d.png",
+    "/images/v1.0.0/about-me.png",
+    "/images/v1.0.0/post.png",
+    "/images/v1.0.0/posts.png",
+    "/images/v1.0.0/da-ngon-ngu.png"
+  ],
+
+  "settings": {
+    "autoplay": true,
+    "delay": 2000
+  }
+}
+```
 
 ### Improvements:
 
@@ -85,11 +109,26 @@ In this phase, I shifted my focus from technology to User Experience (UX) and In
 
 For the latest version, I migrated to React and moved away from the 2-column layout in favor of a more fluid, single-column design.
 
-|  |  |  |
-|--|--|--|
-| ![home](/images/v3.0.0/home-d.png) | ![home](/images/v3.0.0/home-l.png) | ![home](/images/v3.0.0/about-me-d.png) |
-| ![home](/images/v3.0.0/about-me-l.png) | ![home](/images/v3.0.0/contact-d.png) | ![home](/images/v3.0.0/contact-l.png) |
-| ![home](/images/v3.0.0/project-d.png) | ![home](/images/v3.0.0/project-l.png) | |
+
+```slideshow
+{
+  "images": [
+    "/images/v3.0.0/home-l.png",
+    "/images/v3.0.0/about-me-l.png",
+    "/images/v3.0.0/project-l.png",
+    "/images/v3.0.0/contact-l.png",
+    "/images/v3.0.0/home-d.png",
+    "/images/v3.0.0/about-me-d.png",
+    "/images/v3.0.0/project-d.png",
+    "/images/v3.0.0/contact-d.png"
+  ],
+
+  "settings": {
+    "autoplay": true,
+    "delay": 2000
+  }
+}
+```
 
 ### Why React?
 
@@ -110,6 +149,8 @@ For the latest version, I migrated to React and moved away from the 2-column lay
 ### The Result:
 
 - A highly maintainable codebase that is modular, easy to debug, and ready to evolve into a full-scale personal blog.
+
+---
 
 ## Engineering Principles Learned
 
@@ -145,8 +186,12 @@ The journey doesn't end here. My next steps include:
 
 - **Lazy Loading**: Optimizing images and heavy components for better Core Web Vitals.
 
+---
+
 ## Conclusion
 
 A portfolio is a "living" product. Each iteration reflects a step forward in my professional maturity—moving from "using technology" to "selecting the right technology."
 
 **Writing code is one thing, but understanding why you chose a specific architecture is what defines an engineer.**
+
+---

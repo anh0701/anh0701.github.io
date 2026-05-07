@@ -1,6 +1,3 @@
-import { ThemeProvider } from '@/context/ThemeContext';
-import { getAllPosts } from '../lib/posts';
-import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
@@ -10,7 +7,6 @@ import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 export default function Home() {
-  const posts = getAllPosts().slice(0, 3);
 
   const { hash } = useLocation();
 

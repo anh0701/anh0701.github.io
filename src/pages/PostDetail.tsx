@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getAllPosts } from '../lib/posts';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import Slideshow from '@/components/Slideshow';
 
 export default function PostDetail() {
   const { slug } = useParams();
@@ -62,7 +63,57 @@ export default function PostDetail() {
         <div className="h-px bg-gray-200 dark:bg-gray-800 my-8" />
 
         <article className="prose prose-lg dark:prose-invert max-w-none">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              code({
+                className,
+                children,
+              }) {
+                const lang = className?.replace(
+                  'language-',
+                  ''
+                );
+
+                // CUSTOM SLIDESHOW BLOCK
+                if (lang === 'slideshow') {
+                  try {
+                    const data = JSON.parse(
+                      String(children)
+                    );
+
+                    return (
+                      <Slideshow
+                        images={data.images}
+                        settings={data.settings}
+                      />
+                    );
+                  } catch (err) {
+                    return (
+                      <div
+                        className="
+                          p-4 rounded-xl
+                          bg-red-100
+                          text-red-500
+                        "
+                      >
+                        Invalid slideshow JSON
+                      </div>
+                    );
+                  }
+                }
+
+                // NORMAL CODE BLOCK
+                return (
+                  <pre>
+                    <code className={className}>
+                      {children}
+                    </code>
+                  </pre>
+                );
+              },
+            }}
+          >
             {post.content}
           </ReactMarkdown>
         </article>
