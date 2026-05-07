@@ -19,44 +19,51 @@ export default function Navbar() {
         bg-white/80 dark:bg-black/70
         backdrop-blur-md
         border-b border-gray-100 dark:border-gray-800
-        h-16 flex items-center
+        h-16
         px-6 md:px-10
+
+        grid grid-cols-3 items-center
       "
     >
-      <button
-        className="shrink-0"
-        onClick={() => handleScroll("home")}
-      >
-        <img
-          className="rounded-full h-9 w-auto cursor-pointer"
-          src="/avatar.png"
-          alt="Logo"
-        />
-      </button>
-
-      {/* Desktop Menu */}
-      <div className="hidden md:flex items-center gap-6 text-base font-medium mx-auto">
-        {navItems.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => handleScroll(item.id)}
-            className="
-              text-gray-700 dark:text-gray-300
-              hover:text-indigo-500 dark:hover:text-indigo-400
-              transition-colors
-            "
-          >
-            {item.label}
-          </button>
-        ))}
+      <div className="flex justify-start">
+        <button
+          className="shrink-0"
+          onClick={() => handleScroll("home")}
+        >
+          <img
+            className="rounded-full h-9 w-auto cursor-pointer"
+            src="/avatar.png"
+            alt="Logo"
+          />
+        </button>
       </div>
 
-      <div className="flex items-center gap-3 ml-auto">
+      {/* Desktop Menu */}
+      <div className="flex justify-center">
+
+        <div className="hidden md:flex items-center gap-6 text-base font-medium mx-auto">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => handleScroll(item.id)}
+              className="
+                text-gray-700 dark:text-gray-300
+                hover:text-indigo-500 dark:hover:text-indigo-400
+                transition-colors cursor-pointer
+              "
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex justify-end items-center gap-3">
         <button
           onClick={toggleTheme}
           className="
             px-2 py-2
-           text-gray-800 dark:text-gray-200
+           text-gray-800 dark:text-gray-200 cursor-pointer
           "
         >
           {theme === "dark" ? (
