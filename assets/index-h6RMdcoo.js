@@ -330,7 +330,7 @@ A portfolio is a "living" product. Each iteration reflects a step forward in my 
                 active:scale-95
                 transition-all
                 duration-300
-                `,children:G.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",className:"w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform",fill:"currentColor",viewBox:"0 0 16 16",children:G.jsx("path",{d:"m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"})})}),G.jsx("button",{onClick:s,className:`
+                `,children:G.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",className:"w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-2 group-hover:translate-x-1 transition-transform",fill:"currentColor",viewBox:"0 0 16 16",children:G.jsx("path",{d:"m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"})})}),G.jsx("button",{onClick:s,className:`
                 absolute
                 right-4
                 top-1/2
@@ -342,7 +342,7 @@ A portfolio is a "living" product. Each iteration reflects a step forward in my 
                 active:scale-95
                 transition-all
                 duration-300
-                `,children:G.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",className:"w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform",fill:"currentColor",viewBox:"0 0 16 16",children:G.jsx("path",{d:"m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"})})}),G.jsx("div",{className:`
+                `,children:G.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",className:"w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-2 group-hover:translate-x-1 transition-transform",fill:"currentColor",viewBox:"0 0 16 16",children:G.jsx("path",{d:"m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"})})}),G.jsx("div",{className:`
                     absolute
                     bottom-3
                     left-1/2
