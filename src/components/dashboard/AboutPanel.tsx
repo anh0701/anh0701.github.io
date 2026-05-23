@@ -1,3 +1,4 @@
+import { skills } from "@/data/skills";
 import Panel from "../ui/Panel";
 
 export default function AboutPanel() {
@@ -20,7 +21,7 @@ export default function AboutPanel() {
               tracking-tight
             "
           >
-            Engineering-focused backend developer.
+            Engineering-focused full stack developer.
           </h2>
 
           <p
@@ -32,8 +33,9 @@ export default function AboutPanel() {
               text-zinc-400
             "
           >
-            I focus on building scalable backend systems, database tooling,
-            distributed services, and developer-focused infrastructure.
+            I build scalable web applications across both frontend and backend,
+            focusing on clean architecture, performance, and developer
+            experience.
           </p>
 
           <p
@@ -44,8 +46,9 @@ export default function AboutPanel() {
               text-zinc-400
             "
           >
-            My interests include SQL parsing, metadata extraction,
-            Elasticsearch, API architecture, and system design.
+            My interests include modern frontend frameworks, backend systems,
+            database design, API architecture, distributed systems, and search
+            technologies like Elasticsearch.
           </p>
         </Panel>
 
@@ -58,13 +61,7 @@ export default function AboutPanel() {
               space-y-4
             "
           >
-            {[
-              "Java / Spring Boot",
-              "PostgreSQL / MySQL",
-              "Docker / Linux",
-              "Redis / Kafka",
-              "ANTLR4",
-            ].map((item) => (
+            {skills.map((item) => (
               <div
                 key={item}
                 className="

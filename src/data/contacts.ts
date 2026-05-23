@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin, FiMail, FiDownload } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import type { IconType } from "react-icons/lib";
 
 export type ContactItem = {

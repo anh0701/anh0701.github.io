@@ -1,4 +1,4 @@
-## Introduction
+## 1. Introduction
 
 A portfolio is more than just a gallery of projects; it is a live record of a developer’s technical mindset and growth. Over time, my personal portfolio has undergone several transformations. Each version wasn't just a "rewrite," but a strategic shift in understanding how to choose the right tool for the job.
 
@@ -25,7 +25,7 @@ My first version was built using Angular. At the time, my primary goal was to ma
 }
 ```
 
-### Key Achievements:
+### a. Key Achievements:
 
 - **Component-Based Architecture**: Learned how to break down UI into reusable blocks.
 
@@ -33,7 +33,7 @@ My first version was built using Angular. At the time, my primary goal was to ma
 
 - **Routing**: Managed navigation within a single-page environment.
 
-### The Challenges:
+### b. The Challenges:
 
 - **Overkill**: Angular’s powerful features (Dependency Injection, RxJS) were unnecessary for what was essentially a static site.
 
@@ -63,7 +63,7 @@ After realizing Version 1 was over-engineered, I stripped everything down to Van
 }
 ```
 
-### Improvements:
+### a. Improvements:
 
 - **Blazing Fast Performance**: Significant reduction in load times and zero framework overhead.
 
@@ -71,7 +71,7 @@ After realizing Version 1 was over-engineered, I stripped everything down to Van
 
 - **_Features Added_**: Implemented a Dark/Light mode toggle and basic i18n (English/Vietnamese) support.
 
-### The Roadblock:
+### b. The Roadblock:
 
 - **State Management Chaos**: As I added more features (theme, language, filtering), managing the state with pure JS became messy and prone to bugs.
 
@@ -83,13 +83,13 @@ In this phase, I shifted my focus from technology to User Experience (UX) and In
 
 ![demo](/images/v2.0.0/image.png)
 
-### Design Strategy:
+### a. Design Strategy:
 
 - **Left Column (Sticky)**: Essential info (About, Skills, Contact).
 
 - **Right Column (Scrollable)**: Project list and detailed content.
 
-### Benefits:
+### b. Benefits:
 
 - **Clear Hierarchy**: Separation between navigation and consumption.
 
@@ -107,10 +107,14 @@ For the latest version, I migrated to React and moved away from the 2-column lay
     "/images/v3.0.0/home-l.png",
     "/images/v3.0.0/about-me-l.png",
     "/images/v3.0.0/project-l.png",
+    "/images/v3.0.0/blog-l.png",
+    "/images/v3.0.0/blog-d-l.png",
     "/images/v3.0.0/contact-l.png",
     "/images/v3.0.0/home-d.png",
     "/images/v3.0.0/about-me-d.png",
     "/images/v3.0.0/project-d.png",
+    "/images/v3.0.0/blog-d.png",
+    "/images/v3.0.0/blog-d-d.png",
     "/images/v3.0.0/contact-d.png"
   ],
 
@@ -121,7 +125,7 @@ For the latest version, I migrated to React and moved away from the 2-column lay
 }
 ```
 
-### Why React?
+### a. Why React?
 
 - **State Management**: Hooks (useState, useContext) made managing themes elegant.
 
@@ -129,7 +133,7 @@ For the latest version, I migrated to React and moved away from the 2-column lay
 
 - **Scalability**: Easier to integrate dynamic content and external APIs.
 
-### Why the Change?
+### b. Why the Change?
 
 - **Mobile-First Approach**: A single-column layout provides a more seamless experience across devices.
 
@@ -137,15 +141,13 @@ For the latest version, I migrated to React and moved away from the 2-column lay
 
 - **State Management**: Hooks (useState, useContext) made managing global states like theme and language elegant and predictable.
 
-### The Result:
+### c. The Result:
 
 - A highly maintainable codebase that is modular, easy to debug, and ready to evolve into a full-scale personal blog.
 
----
+## 2. Engineering Principles Learned
 
-## Engineering Principles Learned
-
-### 1. Match Tech to the Problem
+### a. Match Tech to the Problem
 
 - **Angular**: Great for enterprise-level apps; too heavy for simple portfolios.
 
@@ -153,21 +155,21 @@ For the latest version, I migrated to React and moved away from the 2-column lay
 
 - **React**: The "sweet spot" for flexibility and maintainability.
 
-### 2. Performance is a Feature
+### b. Performance is a Feature
 
 Always monitor bundle sizes and optimize asset loading. A slow portfolio is a missed opportunity.
 
-### 3. UX is Non-Negotiable
+### c. UX is Non-Negotiable
 
 Features like Dark Mode and responsive layouts aren't "extras"—they are essential for modern web standards.
 
-### 4. Evolutionary Design
+### d. Evolutionary Design
 
 UI/UX should evolve based on how content is consumed. Moving from 2 columns to a modern responsive layout reflects a User-First mindset.
 
 ---
 
-## Future Roadmap
+## 3. Future Roadmap
 
 The journey doesn't end here. My next steps include:
 
@@ -179,10 +181,8 @@ The journey doesn't end here. My next steps include:
 
 ---
 
-## Conclusion
+## 4. Conclusion
 
 A portfolio is a "living" product. Each iteration reflects a step forward in my professional maturity—moving from "using technology" to "selecting the right technology."
 
 **Writing code is one thing, but understanding why you chose a specific architecture is what defines an engineer.**
-
----

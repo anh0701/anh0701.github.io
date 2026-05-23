@@ -1,9 +1,7 @@
-# Building SQL Parser with ANTLR4
-
 ANTLR4 is one of the most powerful
 parser generators available today.
 
-## Why SQL parsing is difficult
+## 1. Why SQL parsing is difficult
 
 Every SQL dialect differs:
 
@@ -12,9 +10,7 @@ Every SQL dialect differs:
 - SQL Server
 - MySQL
 
----
-
-## Architecture
+## 2. Architecture
 
 ```txt
 Client
@@ -28,10 +24,10 @@ AST Transformer
 SQL Generator
 ```
 
-## Challenges
+## 3. Challenges
 
 The most difficult part was:
 
-- nested query handling
-- vendor-specific syntax
+- Nested query handling
+- Vendor-specific syntax
 - AST transformation

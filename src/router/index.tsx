@@ -1,14 +1,20 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 
 import RootLayout from "../layout/RootLayout";
 
 import HomePage from "../pages/HomePage";
 import BlogPage from "../pages/BlogPage";
 import BlogDetailPage from "../pages/BlogDetailPage";
+import ScrollToTop from "@/components/system/ScrollToTop";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    element: <RootLayout />,
+    element: (
+      <>
+        <ScrollToTop />
+        <RootLayout />
+      </>
+    ),
 
     children: [
       {

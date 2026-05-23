@@ -57,4 +57,12 @@ body::before {
   .markdown code {
     @apply text-pink-300;
   }
+
+  .markdown ul {
+    @apply list-disc pl-5 space-y-2;
+  }
+
+  .markdown li {
+    @apply text-gray-200;
+  }
 }

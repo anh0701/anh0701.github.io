@@ -62,20 +62,31 @@ export default function HeroPanel() {
         <div className="p-5 font-mono text-xs text-zinc-300 space-y-4">
           <div>
             <span className="text-zinc-500">$ focus</span>
-            <p className="mt-1 text-zinc-200">Backend systems & tooling</p>
+            <p className="mt-1 text-zinc-200">
+              Full-stack engineering (Backend + Frontend)
+            </p>
           </div>
 
           <div>
             <span className="text-zinc-500">$ stack</span>
+            <p className="mt-1 text-zinc-200">Frontend:</p>
             <p className="mt-1 text-zinc-400">
-              Spring Boot · PostgreSQL · Redis · Docker · ANTLR4
+              React, TypeScript, Tailwind CSS, Vite, React Router
+            </p>
+            <br />
+            <p className="mt-1 text-zinc-200">Backend:</p>
+            <p className="mt-1 text-zinc-400">
+              Spring Boot, PostgreSQL, Redis, Docker, ANTLR4
             </p>
           </div>
 
           <div>
             <span className="text-zinc-500">$ build</span>
             <p className="mt-1 text-zinc-400">
-              SQL tools, metadata engine, query analyzer
+              Scalable backend systems, database tooling, SQL processing engines
+              Modern UI systems, responsive web apps, component-driven
+              architecture Developer tools, metadata systems, and full-stack
+              applications
             </p>
           </div>
 

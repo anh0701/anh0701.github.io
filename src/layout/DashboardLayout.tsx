@@ -11,10 +11,10 @@ export default function DashboardLayout({ children }: Props) {
   return (
     <div
       className="
-    min-h-screen
-    bg-[#050816]
-    text-white
-    "
+        min-h-screen
+        bg-[#050816]
+        text-white
+        "
     >
       <MobileMenu />
       <div className="flex">
@@ -24,11 +24,10 @@ export default function DashboardLayout({ children }: Props) {
           className="
             min-w-0
             flex-1
-
             px-4
             pb-10
             pt-4
-
+            lg:ml-5
             lg:px-3
           "
         >

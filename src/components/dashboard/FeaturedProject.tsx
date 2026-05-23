@@ -1,8 +1,11 @@
 import { FiArrowUpRight, FiGithub } from "react-icons/fi";
 
 import Panel from "../ui/Panel";
+import { featuredProject } from "@/data/featuredProject";
 
 export default function FeaturedProject() {
+  const project = featuredProject;
+
   return (
     <section id="projects" className="mt-6">
       <Panel
@@ -38,7 +41,7 @@ export default function FeaturedProject() {
                   lg:text-5xl
                 "
               >
-                SQL Dialect Converter
+                {project.title}
               </h2>
 
               <p
@@ -49,8 +52,7 @@ export default function FeaturedProject() {
                   text-zinc-400
                 "
               >
-                A backend engine for converting SQL queries across multiple
-                database dialects using ANTLR4 and custom parsing logic.
+                {project.description}
               </p>
             </div>
 
@@ -62,7 +64,7 @@ export default function FeaturedProject() {
               "
             >
               <a
-                href="#"
+                href={project.github}
                 className="
                   inline-flex
                   items-center gap-2
@@ -79,22 +81,24 @@ export default function FeaturedProject() {
                 Open Github
               </a>
 
-              <a
-                href="#"
-                className="
-                  inline-flex
-                  items-center gap-2
-                  rounded-2xl
-                  border border-white/10
-                  bg-white/[0.03]
-                  px-5 py-3
-                  transition-all
-                  hover:bg-white/[0.06]
-                "
-              >
-                <FiArrowUpRight />
-                Live Demo
-              </a>
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  className="
+                    inline-flex
+                    items-center gap-2
+                    rounded-2xl
+                    border border-white/10
+                    bg-white/[0.03]
+                    px-5 py-3
+                    transition-all
+                    hover:bg-white/[0.06]
+                  "
+                >
+                  <FiArrowUpRight />
+                  Live Demo
+                </a>
+              )}
             </div>
 
             {/* STACK */}
@@ -104,22 +108,20 @@ export default function FeaturedProject() {
                 flex flex-wrap gap-3
               "
             >
-              {["Java", "ANTLR4", "Spring Boot", "PostgreSQL", "Docker"].map(
-                (item) => (
-                  <div
-                    key={item}
-                    className="
+              {project.stack.map((item) => (
+                <div
+                  key={item}
+                  className="
                     rounded-full
                     border border-white/10
                     bg-white/[0.03]
                     px-4 py-2
                     text-sm
                   "
-                  >
-                    {item}
-                  </div>
-                ),
-              )}
+                >
+                  {item}
+                </div>
+              ))}
             </div>
 
             {/* METRICS */}
@@ -130,22 +132,7 @@ export default function FeaturedProject() {
                 gap-4
               "
             >
-              {[
-                {
-                  label: "Dialects",
-                  value: "5+",
-                },
-
-                {
-                  label: "Queries",
-                  value: "10k+",
-                },
-
-                {
-                  label: "Latency",
-                  value: "43ms",
-                },
-              ].map((item) => (
+              {project.metrics.map((item) => (
                 <div
                   key={item.label}
                   className="

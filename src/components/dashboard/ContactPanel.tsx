@@ -17,8 +17,9 @@ export default function ContactPanel() {
             </h2>
 
             <p className="mt-6 max-w-md leading-relaxed text-zinc-400">
-              Open for backend engineering opportunities, collaborations, and
-              technical discussions.
+              Open for full stack engineering opportunities, collaborations, and
+              technical discussions across web development, system design, and
+              scalable application architecture.
             </p>
 
             {/* STATUS */}

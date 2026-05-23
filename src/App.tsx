@@ -5,7 +5,6 @@ import router from "./router";
 function App() {
   return (
     <>
-      {/* <HashScroll /> */}
       <RouterProvider router={router} />
     </>
   );
