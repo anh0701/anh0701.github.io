@@ -460,21 +460,19 @@ A portfolio is a "living" product. Each iteration reflects a step forward in my 
                             hover:border-white/20
                             hover:text-white
                           `}
-                      `,children:o},o)})})]})]})]})]})]})}const Lw=[{title:"Email",value:"quynhanhphamthi01@gmail.com",href:"mailto:quynhanhphamthi01@gmail.com",icon:b0,external:!1},{title:"Github",value:"github.com/anh0701",href:"https://github.com/anh0701",icon:th,external:!0},{title:"LinkedIn",value:"linkedin.com/in/anh0701",href:"https://linkedin.com/anh0701",icon:kw,external:!0}];function Uw(){return k.jsx("section",{id:"contact",className:"mt-6 pb-10",children:k.jsx(_n,{className:"p-8 lg:p-10",children:k.jsxs("div",{className:"grid gap-10 lg:grid-cols-[0.8fr_1fr]",children:[k.jsxs("div",{children:[k.jsx("p",{className:"text-zinc-500",children:"Contact"}),k.jsx("h2",{className:"mt-4 text-5xl font-bold tracking-tight",children:"Let’s connect."}),k.jsx("p",{className:"mt-6 max-w-md leading-relaxed text-zinc-400",children:"Open for full stack engineering opportunities, collaborations, and technical discussions across web development, system design, and scalable application architecture."}),k.jsxs("div",{className:"mt-10 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-5",children:[k.jsxs("div",{className:"flex items-center gap-3",children:[k.jsx("div",{className:"h-3 w-3 rounded-full bg-emerald-400"}),k.jsx("p",{className:"font-medium",children:"Available for work"})]}),k.jsx("p",{className:"mt-3 text-sm text-zinc-300",children:"Usually responds within 24 hours."})]})]}),k.jsx("div",{className:"grid gap-4",children:Lw.map(t=>{const a=t.icon;return k.jsxs("a",{href:t.href,target:t.external?"_blank":void 0,rel:t.external?"noreferrer":void 0,className:`
-                    group
-                    flex items-center justify-between
-                    rounded-2xl
-                    border border-white/5
+                      `,children:o},o)})})]})]})]})]})]})}const Lw=[{title:"Email",value:"quynhanhphamthi01@gmail.com",href:"mailto:quynhanhphamthi01@gmail.com",icon:b0,external:!1},{title:"Github",value:"github.com/anh0701",href:"https://github.com/anh0701",icon:th,external:!0},{title:"LinkedIn",value:"linkedin.com/in/anh0701",href:"https://linkedin.com/anh0701",icon:kw,external:!0}];function Uw(){return k.jsx("section",{id:"contact",className:"mt-6 pb-10",children:k.jsx(_n,{className:"p-5 sm:p-6 lg:p-10",children:k.jsxs("div",{className:"grid gap-8 lg:grid-cols-[0.8fr_1fr]",children:[k.jsxs("div",{children:[k.jsx("p",{className:"text-xs sm:text-sm text-zinc-500",children:"Contact"}),k.jsx("h2",{className:"mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight",children:"Let’s connect."}),k.jsx("p",{className:"mt-4 sm:mt-6 max-w-md text-sm sm:text-base leading-relaxed text-zinc-400",children:"Open for full stack engineering opportunities, collaborations, and technical discussions across web development, system design, and scalable application architecture."}),k.jsxs("div",{className:"mt-6 sm:mt-10 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-4 sm:p-5",children:[k.jsxs("div",{className:"flex items-center gap-3",children:[k.jsx("div",{className:"h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-emerald-400"}),k.jsx("p",{className:"text-sm sm:text-base font-medium",children:"Available for work"})]}),k.jsx("p",{className:"mt-2 text-xs sm:text-sm text-zinc-300",children:"Usually responds within 24 hours."})]})]}),k.jsx("div",{className:"grid gap-3 sm:gap-4",children:Lw.map(t=>{const a=t.icon;return k.jsxs("a",{href:t.href,target:t.external?"_blank":void 0,rel:t.external?"noreferrer":void 0,className:`
+                    group flex items-center justify-between
+                    rounded-2xl border border-white/5
                     bg-white/[0.02]
-                    p-5
+                    p-4 sm:p-5
                     transition-all
-                    hover:border-white/10
-                    hover:bg-white/[0.04]
-                  `,children:[k.jsxs("div",{className:"flex items-center gap-4",children:[k.jsx("div",{className:"flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.03] text-xl",children:k.jsx(a,{})}),k.jsxs("div",{children:[k.jsx("p",{className:"text-sm text-zinc-500",children:t.title}),k.jsx("p",{className:"mt-1",children:t.value})]})]}),k.jsx(x0,{className:`
+                    hover:border-white/10 hover:bg-white/[0.04]
+                  `,children:[k.jsxs("div",{className:"flex items-center gap-3 sm:gap-4 min-w-0",children:[k.jsx("div",{className:"flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl bg-white/[0.03] text-lg sm:text-xl",children:k.jsx(a,{})}),k.jsxs("div",{className:"min-w-0",children:[k.jsx("p",{className:"text-xs sm:text-sm text-zinc-500",children:t.title}),k.jsx("p",{className:"mt-1 truncate text-sm sm:text-base",children:t.value})]})]}),k.jsx(x0,{className:`
+                      hidden sm:block
                       text-zinc-500
                       transition-transform
-                      group-hover:-translate-y-1
-                      group-hover:translate-x-1
+                      group-hover:-translate-y-1 group-hover:translate-x-1
+                      flex-shrink-0
                     `})]},t.title)})})]})})})}const Bw={title:"PL/SQL to MySQL Query Translator",description:"A backend engine that transforms PL/SQL queries into MySQL-compatible syntax using ANTLR4-based parsing and rule-driven AST transformations.",github:"https://github.com/anh0701/plsql_parser",demo:"",stack:["Python","Flask","ANTLR4","Docker"],metrics:[{label:"Source Dialect",value:"PL/SQL"},{label:"Target Dialect",value:"MySQL"},{label:"Latency",value:"43ms"}]};function Hw(){const t=Bw;return k.jsx("section",{id:"projects",className:"mt-6",children:k.jsx(_n,{className:`
           overflow-hidden
           p-6 lg:p-10
