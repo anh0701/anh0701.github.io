@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const navItems = [
   { label: "Home", id: "home" },
@@ -6,18 +6,18 @@ export const navItems = [
   { label: "Projects", id: "projects" },
   { label: "Contact", id: "contact" },
   { label: "About", id: "about" },
-]
+];
 
 export default function useScrollToId() {
   const navigate = useNavigate();
   const location = useLocation();
 
   return (id: string) => {
-    if (location.pathname !== '/') {
+    if (location.pathname !== "/") {
       navigate(`/#${id}`);
     } else {
       document.getElementById(id)?.scrollIntoView({
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };

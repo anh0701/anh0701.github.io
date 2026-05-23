@@ -1,11 +1,3 @@
----
-title: "My Portfolio Evolution: From Over-Engineering with Angular to Scaling with React"
-date: "2026-05-06"
-summary: "A portfolio is more than just a gallery of projects; it is a live record of a developer’s technical mindset and growth. Over time, my personal portfolio has undergone several transformations..."
-tags: ["portfolio", "architecture"]
----
-
-
 ## Introduction
 
 A portfolio is more than just a gallery of projects; it is a live record of a developer’s technical mindset and growth. Over time, my personal portfolio has undergone several transformations. Each version wasn't just a "rewrite," but a strategic shift in understanding how to choose the right tool for the job.
@@ -77,7 +69,7 @@ After realizing Version 1 was over-engineered, I stripped everything down to Van
 
 - **Granular Control**: Total freedom over the UI without working around framework constraints.
 
-- ***Features Added***: Implemented a Dark/Light mode toggle and basic i18n (English/Vietnamese) support.
+- **_Features Added_**: Implemented a Dark/Light mode toggle and basic i18n (English/Vietnamese) support.
 
 ### The Roadblock:
 
@@ -108,7 +100,6 @@ In this phase, I shifted my focus from technology to User Experience (UX) and In
 ## Phase 4: Scaling with React (The Balanced Solution)
 
 For the latest version, I migrated to React and moved away from the 2-column layout in favor of a more fluid, single-column design.
-
 
 ```slideshow
 {

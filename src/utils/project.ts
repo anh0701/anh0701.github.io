@@ -1,9 +1,9 @@
 export type Project = {
-  title: string
-  desc: string
-  url: string
-  techs: string[]
-}
+  title: string;
+  desc: string;
+  url: string;
+  techs: string[];
+};
 
 export const projects: Project[] = [
   {
@@ -21,7 +21,7 @@ export const projects: Project[] = [
   {
     title: "Log Analytics & Automation Testing Tool",
     desc: "This test flow describes a simulated production test system for electronic products ",
-    techs: ["Python", "Flask","Pandas", "HTML", "CSS"],
+    techs: ["Python", "Flask", "Pandas", "HTML", "CSS"],
     url: "https://github.com/anh0701/automated-test-tool",
   },
   {
@@ -72,5 +72,4 @@ export const projects: Project[] = [
     techs: ["Shell", "PowerShell"],
     url: "https://github.com/anh0701/sbi-cli",
   },
-
-]
+];
