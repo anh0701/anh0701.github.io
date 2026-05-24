@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-
-const navItems = ["home", "projects", "blog", "about", "contact"];
+import { items } from "./Sidebar";
+import { Link } from "react-router-dom";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -46,19 +46,15 @@ export default function MobileMenu() {
             </button>
 
             <nav className="space-y-6">
-              {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item}`}
+              {items.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
                   onClick={() => setOpen(false)}
-                  className="
-                    block
-                    text-xl
-                    capitalize
-                  "
+                  className="block text-xl text-zinc-400 hover:text-white transition-colors"
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               ))}
             </nav>
           </div>

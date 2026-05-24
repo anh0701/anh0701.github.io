@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import { FiHome, FiFolder, FiBookOpen, FiUser, FiMail } from "react-icons/fi";
 
-const items = [
+export const items = [
   {
     label: "Home",
     href: "/",
