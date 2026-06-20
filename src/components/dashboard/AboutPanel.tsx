@@ -4,6 +4,20 @@ import Panel from "../ui/Panel";
 export default function AboutPanel() {
   return (
     <section id="about" className="mt-6">
+
+      <div className="mb-6">
+        <h2
+          className="
+            text-lg
+            font-semibold
+            tracking-tight
+            text-zinc-100
+          "
+        >
+          Technical Background
+        </h2>
+      </div>
+
       <div
         className="
           grid gap-6
@@ -15,10 +29,11 @@ export default function AboutPanel() {
 
           <h2
             className="
-              mt-4
-              text-4xl
-              font-bold
+              mt-3
+              text-2xl
+              font-semibold
               tracking-tight
+              text-zinc-100
             "
           >
             Engineering-focused full stack developer.
@@ -26,10 +41,10 @@ export default function AboutPanel() {
 
           <p
             className="
-              mt-8
+              mt-6
               max-w-3xl
-              text-lg
-              leading-relaxed
+              text-base
+              leading-7
               text-zinc-400
             "
           >
@@ -52,23 +67,25 @@ export default function AboutPanel() {
           </p>
         </Panel>
 
-        <Panel className="p-8 lg:p-10">
+        <Panel className="p-6 lg:p-8">
           <p className="text-zinc-500">Core Stack</p>
 
           <div
             className="
-              mt-8
-              space-y-4
+              mt-6 space-y-3
             "
           >
             {skills.map((item) => (
               <div
                 key={item}
                 className="
-                  rounded-2xl
+                  rounded-xl
                   border border-white/5
                   bg-white/[0.02]
-                  p-4
+                  px-4
+                  py-3
+                  text-sm
+                  text-zinc-300
                 "
               >
                 {item}
