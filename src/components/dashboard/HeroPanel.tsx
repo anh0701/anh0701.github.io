@@ -26,7 +26,7 @@ export default function HeroPanel() {
               tracking-tight
             "
           >
-            Full-stack Web Developer
+            Backend Software Engineer
           </h1>
 
           <p
@@ -38,11 +38,7 @@ export default function HeroPanel() {
               text-zinc-400
             "
           >
-            I focus on building scalable backend systems, well-structured APIs,
-            and modern frontend interfaces. I enjoy designing clean
-            architectures and crafting web experiences that are both performant
-            and easy to maintain, aiming to bridge solid engineering with smooth
-            user interaction.
+            I have experience building backend services and RESTful APIs with Java and Spring Boot for enterprise applications. Beyond backend development, I enjoy exploring computer vision and AI through personal projects using Python, OpenCV, and YOLOv8. I am looking to grow into software engineering roles that combine solid backend development with opportunities to work on intelligent systems and emerging technologies.
           </p>
         </div>
       </div>
@@ -63,7 +59,7 @@ export default function HeroPanel() {
           <div>
             <span className="text-zinc-500">$ focus</span>
             <p className="mt-1 text-zinc-200">
-              Full-stack engineering (Backend + Frontend)
+              Backend Software Engineer
             </p>
           </div>
 

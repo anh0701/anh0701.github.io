@@ -36,7 +36,7 @@ export default function AboutPanel() {
               text-zinc-100
             "
           >
-            Engineering-focused full stack developer.
+            Backend Software Engineer with a passion for Computer Vision.
           </h2>
 
           <p
@@ -48,9 +48,7 @@ export default function AboutPanel() {
               text-zinc-400
             "
           >
-            I build scalable web applications across both frontend and backend,
-            focusing on clean architecture, performance, and developer
-            experience.
+            I build scalable backend systems, well-structured APIs, and reliable enterprise applications using Java and Spring Boot.
           </p>
 
           <p
@@ -61,9 +59,7 @@ export default function AboutPanel() {
               text-zinc-400
             "
           >
-            My interests include modern frontend frameworks, backend systems,
-            database design, API architecture, distributed systems, and search
-            technologies like Elasticsearch.
+            Beyond my professional experience, I enjoy exploring computer vision and AI through personal projects with Python, OpenCV, and YOLOv8, continuously expanding my skills toward R&D software development.
           </p>
         </Panel>
 
