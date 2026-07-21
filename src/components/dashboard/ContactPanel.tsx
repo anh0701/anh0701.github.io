@@ -5,19 +5,31 @@ import { contacts } from "@/data/contacts";
 
 export default function ContactPanel() {
   return (
-    <section id="contact" className="mt-6 pb-10">
+    <section id="contact" className="mt-20 pb-16">
+      <div className="mb-6">
+        <h2
+          className="
+            text-lg
+            font-semibold
+            tracking-tight
+            text-zinc-100
+          "
+        >
+          Contact
+        </h2>
+      </div>
       <Panel className="p-5 sm:p-6 lg:p-10">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1fr]">
 
           {/* LEFT */}
           <div>
-            <p className="text-xs sm:text-sm text-zinc-500">Contact</p>
+            {/* <p className="text-xs sm:text-sm text-zinc-500">Contact</p> */}
 
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-100">
               Let’s connect.
             </h2>
 
-            <p className="mt-4 sm:mt-6 max-w-md text-sm sm:text-base leading-relaxed text-zinc-400">
+            <p className="mt-4 max-w-md text-sm leading-7 text-zinc-400">
               Open for full stack engineering opportunities, collaborations, and
               technical discussions across web development, system design, and
               scalable application architecture.
@@ -27,12 +39,12 @@ export default function ContactPanel() {
             <div className="mt-6 sm:mt-10 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-4 sm:p-5">
               <div className="flex items-center gap-3">
                 <div className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-emerald-400" />
-                <p className="text-sm sm:text-base font-medium">
-                  Available for work
+                <p className="text-sm font-medium">
+                  Available for opportunities
                 </p>
               </div>
 
-              <p className="mt-2 text-xs sm:text-sm text-zinc-300">
+              <p className="mt-1 text-xs text-zinc-400">
                 Usually responds within 24 hours.
               </p>
             </div>
@@ -51,16 +63,22 @@ export default function ContactPanel() {
                   rel={item.external ? "noreferrer" : undefined}
                   className="
                     group flex items-center justify-between
-                    rounded-2xl border border-white/5
+                    rounded-xl
+                    border border-white/5
                     bg-white/[0.02]
-                    p-4 sm:p-5
+                    px-4 py-3
                     transition-all
-                    hover:border-white/10 hover:bg-white/[0.04]
+                    hover:border-white/10
+                    hover:bg-white/[0.04]
                   "
                 >
                   {/* LEFT SIDE */}
                   <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-                    <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl bg-white/[0.03] text-lg sm:text-xl">
+                    <div className="flex h-10 w-10
+                      items-center justify-center
+                      rounded-xl
+                      bg-white/[0.03]
+                      text-base">
                       <Icon />
                     </div>
 

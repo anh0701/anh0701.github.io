@@ -1,11 +1,16 @@
 export type Project = {
   title: string;
+  // slug?: string;
+  highlights: string[];
+  challenges: string[];
+  results: string[];
+  architecture: string[];
   description: string;
   githubUrl: string;
   demoUrl: string;
   type: string;
   stack: string[];
-  preview?: string;
+  // preview?: string;
 };
 
 // export const projects: Project[] = [

@@ -15,7 +15,7 @@ export const items = [
   },
   {
     label: "Blog",
-    href: "/#blog",
+    href: "/#blogs",
     icon: FiBookOpen,
   },
   {

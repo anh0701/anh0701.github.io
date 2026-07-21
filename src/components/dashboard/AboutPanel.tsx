@@ -4,6 +4,20 @@ import Panel from "../ui/Panel";
 export default function AboutPanel() {
   return (
     <section id="about" className="mt-6">
+
+      <div className="mb-6">
+        <h2
+          className="
+            text-lg
+            font-semibold
+            tracking-tight
+            text-zinc-100
+          "
+        >
+          Technical Background
+        </h2>
+      </div>
+
       <div
         className="
           grid gap-6
@@ -15,27 +29,26 @@ export default function AboutPanel() {
 
           <h2
             className="
-              mt-4
-              text-4xl
-              font-bold
+              mt-3
+              text-2xl
+              font-semibold
               tracking-tight
+              text-zinc-100
             "
           >
-            Engineering-focused full stack developer.
+            Backend Software Engineer with a passion for Computer Vision.
           </h2>
 
           <p
             className="
-              mt-8
+              mt-6
               max-w-3xl
-              text-lg
-              leading-relaxed
+              text-base
+              leading-7
               text-zinc-400
             "
           >
-            I build scalable web applications across both frontend and backend,
-            focusing on clean architecture, performance, and developer
-            experience.
+            I build scalable backend systems, well-structured APIs, and reliable enterprise applications using Java and Spring Boot.
           </p>
 
           <p
@@ -46,29 +59,29 @@ export default function AboutPanel() {
               text-zinc-400
             "
           >
-            My interests include modern frontend frameworks, backend systems,
-            database design, API architecture, distributed systems, and search
-            technologies like Elasticsearch.
+            Beyond my professional experience, I enjoy exploring computer vision and AI through personal projects with Python, OpenCV, and YOLOv8, continuously expanding my skills toward R&D software development.
           </p>
         </Panel>
 
-        <Panel className="p-8 lg:p-10">
+        <Panel className="p-6 lg:p-8">
           <p className="text-zinc-500">Core Stack</p>
 
           <div
             className="
-              mt-8
-              space-y-4
+              mt-6 space-y-3
             "
           >
             {skills.map((item) => (
               <div
                 key={item}
                 className="
-                  rounded-2xl
+                  rounded-xl
                   border border-white/5
                   bg-white/[0.02]
-                  p-4
+                  px-4
+                  py-3
+                  text-sm
+                  text-zinc-300
                 "
               >
                 {item}
