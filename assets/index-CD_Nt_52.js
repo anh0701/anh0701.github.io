@@ -80,7 +80,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
                   py-3
                   text-sm
                   text-zinc-300
-                `,children:t},t))})]})]})]})}const Uw=[{title:"Email",value:"quynhanhphamthi01@gmail.com",href:"mailto:quynhanhphamthi01@gmail.com",icon:y0,external:!1},{title:"Github",value:"github.com/anh0701",href:"https://github.com/anh0701",icon:v0,external:!0},{title:"LinkedIn",value:"linkedin.com/in/anh0701",href:"https://linkedin.com/anh0701",icon:Tw,external:!0}];function Bw(){return O.jsxs("section",{id:"contact",className:"mt-20 pb-16",children:[O.jsx("div",{className:"mb-6",children:O.jsx("h2",{className:`
+                `,children:t},t))})]})]})]})}const Uw=[{title:"Email",value:"quynhanhphamthi01@gmail.com",href:"mailto:quynhanhphamthi01@gmail.com",icon:y0,external:!1},{title:"Github",value:"github.com/anh0701",href:"https://github.com/anh0701",icon:v0,external:!0},{title:"LinkedIn",value:"linkedin.com/in/anh0701",href:"https://linkedin.com/in/anh0701",icon:Tw,external:!0}];function Bw(){return O.jsxs("section",{id:"contact",className:"mt-20 pb-16",children:[O.jsx("div",{className:"mb-6",children:O.jsx("h2",{className:`
             text-lg
             font-semibold
             tracking-tight
