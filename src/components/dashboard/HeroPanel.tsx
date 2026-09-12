@@ -38,7 +38,9 @@ export default function HeroPanel() {
               text-zinc-400
             "
           >
-            I have experience building backend services and RESTful APIs with Java and Spring Boot for enterprise applications. Beyond backend development, I enjoy exploring computer vision and AI through personal projects using Python, OpenCV, and YOLOv8. I am looking to grow into software engineering roles that combine solid backend development with opportunities to work on intelligent systems and emerging technologies.
+            Backend Developer with solid experience in building enterprise applications and RESTful APIs using Java and Spring Boot.
+            Passionate about technology, I actively explore new tools and concepts such as Python and Computer Vision through personal side projects.
+            Fast learner with a growth mindset, I am eager to adapt to new technologies, tackle diverse challenges, and contribute effectively to the team’s success.
           </p>
         </div>
       </div>

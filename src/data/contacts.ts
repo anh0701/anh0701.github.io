@@ -27,7 +27,7 @@ export const contacts: ContactItem[] = [
   {
     title: "LinkedIn",
     value: "linkedin.com/in/anh0701",
-    href: "https://linkedin.com/anh0701",
+    href: "https://linkedin.com/in/anh0701",
     icon: FiLinkedin,
     external: true,
   },
