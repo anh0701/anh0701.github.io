@@ -36,7 +36,7 @@ export default function AboutPanel() {
               text-zinc-100
             "
           >
-            Backend Software Engineer with a passion for Computer Vision.
+            Backend Software Engineer.
           </h2>
 
           <p
@@ -59,7 +59,7 @@ export default function AboutPanel() {
               text-zinc-400
             "
           >
-            Beyond my professional experience, I enjoy exploring computer vision and AI through personal projects with Python, OpenCV, and YOLOv8, continuously expanding my skills toward R&D software development.
+            Beyond my professional experience, I enjoy exploring computer vision and AI through personal projects with Python, OpenCV, and YOLOv8.
           </p>
         </Panel>
 
