@@ -1,5 +1,5 @@
-import antlrContent from "../content/blog/antlr-parser.md?raw";
-// import elasticContent from "../content/blog/elastic-sync.md?raw";
+// import antlrContent from "../content/blog/antlr-parser.md?raw";
+import webToMarkdownContent from "../content/blog/web-to-markdown.md?raw";
 import aboutPortfolioContent from "../content/blog/about-portfolio.md?raw";
 
 export const blogs = [
@@ -19,31 +19,26 @@ export const blogs = [
     content: aboutPortfolioContent,
   },
 
-  {
-    slug: "antlr-parser",
-
-    title: "Building SQL Parser with ANTLR4",
-
-    date: "May 2026",
-
-    preview: "Building a SQL dialect parser using ANTLR4.",
-
-    tags: ["ANTLR4", "PostgreSQL", "System Design"],
-
-    content: antlrContent,
-  },
-
   // {
-  //   slug: "elastic-sync",
+  //   slug: "antlr-parser",
 
-  //   title: "Scaling Elasticsearch Sync Pipelines",
+  //   title: "Building SQL Parser with ANTLR4",
 
-  //   date: "April 2026",
+  //   date: "May 2026",
 
-  //   preview: "Real-time sync pipelines from MySQL to Elasticsearch.",
+  //   preview: "Building a SQL dialect parser using ANTLR4.",
 
-  //   tags: ["Kafka", "Elasticsearch", "Distributed Systems"],
+  //   tags: ["ANTLR4", "PostgreSQL", "System Design"],
 
-  //   content: elasticContent,
+  //   content: antlrContent,
   // },
+
+  {
+    slug: "web-to-markdown",
+    title: "Building a Web to Markdown Browser Extension",
+    date: "September 2026",
+    preview: "Designing a lightweight browser extension to convert web pages and selected content into clean Markdown.",
+    tags: ["JavaScript", "Browser Extension", "Markdown", "Web Parsing"],
+    content: webToMarkdownContent,
+  },
 ];
