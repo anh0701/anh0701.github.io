@@ -3,9 +3,9 @@ import { createHashRouter } from "react-router-dom";
 import RootLayout from "../layout/RootLayout";
 
 import HomePage from "../pages/HomePage";
-import BlogPage from "../pages/BlogPage";
 import BlogDetailPage from "../pages/BlogDetailPage";
 import ScrollToTop from "@/components/system/ScrollToTop";
+import BlogListPage from "@/pages/BlogListPage";
 
 const router = createHashRouter([
   {
@@ -24,7 +24,7 @@ const router = createHashRouter([
 
       {
         path: "/blog",
-        element: <BlogPage />,
+        element: <BlogListPage />,
       },
 
       {

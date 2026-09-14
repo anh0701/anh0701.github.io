@@ -1,12 +1,26 @@
 import { Link } from "react-router-dom";
-// import DashboardLayout from "@/layout/DashboardLayout";
+
 import { blogs } from "@/data/blogs";
 import Panel from "@/components/ui/Panel";
 
-export default function BlogPage() {
+type Props = {
+  standalone?: boolean;
+};
+
+export default function BlogPage({ standalone = false }: Props) {
   return (
-    // <DashboardLayout>
-      <section id="blogs" className="pt-10">
+    <section
+      id="blogs"
+      className={`
+        pt-10
+        ${standalone ? "px-4 lg:px-6" : ""}
+      `}
+    >
+      <div
+        className={`
+          ${standalone ? "mx-auto w-full max-w-6xl" : ""}
+        `}
+      >
         <div className="mb-6">
           <h2
             className="
@@ -20,21 +34,6 @@ export default function BlogPage() {
           </h2>
         </div>
 
-        {/* <div className="max-w-6xl">
-          <p className="text-zinc-500">Technical Writing</p>
-
-          <h1
-            className="
-              mt-4
-              text-5xl
-              font-bold
-              tracking-tight
-            "
-          >
-            Blog
-          </h1>
-        </div> */}
-
         <div
           className="
             mt-10
@@ -45,13 +44,7 @@ export default function BlogPage() {
           {blogs.map((blog) => (
             <Link key={blog.slug} to={`/blog/${blog.slug}`}>
               <Panel className="p-6 md:p-7">
-                <p
-                  className="
-                     mt-3
-                      text-sm
-                      text-zinc-500
-                  "
-                >
+                <p className="mt-3 text-sm text-zinc-500">
                   {blog.date}
                 </p>
 
@@ -80,7 +73,7 @@ export default function BlogPage() {
             </Link>
           ))}
         </div>
-      </section>
-    // </DashboardLayout>
+      </div>
+    </section>
   );
 }

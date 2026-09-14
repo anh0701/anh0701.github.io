@@ -28,7 +28,7 @@ export default function DashboardLayout({ children }: Props) {
             pb-10
             pt-4
             lg:ml-5
-            lg:px-3
+            lg:px-8
           "
         >
           {children}

@@ -6,6 +6,8 @@ import DashboardLayout from "@/layout/DashboardLayout";
 import { blogs } from "@/data/blogs";
 import Panel from "@/components/ui/Panel";
 import MarkdownRenderer from "@/components/markdown/MarkdownRenderer";
+import BackToTop from "@/components/ui/BackToTop";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function BlogDetailPage() {
   const { slug } = useParams();
@@ -26,12 +28,17 @@ export default function BlogDetailPage() {
         <Link
           to="/blog"
           className="
+            inline-flex
+            items-center
+            gap-2
+            text-sm
             text-zinc-500
             transition-colors
             hover:text-white
           "
         >
-          ← Back to Blog
+          <FaArrowLeft size={12} />
+          Back to Blog
         </Link>
 
         <Panel
@@ -58,6 +65,7 @@ export default function BlogDetailPage() {
           </article>
         </Panel>
       </section>
+      <BackToTop />
     </DashboardLayout>
   );
 }
