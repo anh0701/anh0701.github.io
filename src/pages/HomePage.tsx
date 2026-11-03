@@ -3,7 +3,7 @@ import AboutPanel from "@/components/dashboard/AboutPanel";
 import ContactPanel from "@/components/dashboard/ContactPanel";
 // import FeaturedProject from "@/components/dashboard/FeaturedProject";
 import HeroPanel from "@/components/dashboard/HeroPanel";
-import ProjectGrid from "@/components/dashboard/ProjectGrid";
+import ProjectGrid from "@/components/dashboard/projects/ProjectGrid";
 // import StatsPanel from "@/components/dashboard/StatsPanel";
 import DashboardLayout from "@/layout/DashboardLayout";
 import BlogPage from "./BlogPage";
@@ -16,7 +16,7 @@ export default function HomePage() {
       {/* <FeaturedProject /> */}
       <ProjectGrid />
       {/* <BlogPanel /> */}
-      <BlogPage/>
+      <BlogPage />
       <AboutPanel />
       <ContactPanel />
     </DashboardLayout>
