@@ -4,7 +4,6 @@ import Panel from "../ui/Panel";
 export default function AboutPanel() {
   return (
     <section id="about" className="mt-6">
-
       <div className="mb-6">
         <h2
           className="
@@ -48,7 +47,8 @@ export default function AboutPanel() {
               text-zinc-400
             "
           >
-            I build scalable backend systems, well-structured APIs, and reliable enterprise applications using Java and Spring Boot.
+            I build scalable backend systems, well-structured APIs, and reliable
+            enterprise applications using Java and Spring Boot.
           </p>
 
           <p
@@ -59,7 +59,8 @@ export default function AboutPanel() {
               text-zinc-400
             "
           >
-            Beyond my professional experience, I enjoy exploring computer vision and AI through personal projects with Python, OpenCV, and YOLOv8.
+            Beyond my professional experience, I enjoy exploring computer vision
+            and AI through personal projects with Python, OpenCV, and YOLOv8.
           </p>
         </Panel>
 

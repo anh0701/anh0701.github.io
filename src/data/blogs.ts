@@ -37,7 +37,8 @@ export const blogs = [
     slug: "web-to-markdown",
     title: "Building a Web to Markdown Browser Extension",
     date: "September 2026",
-    preview: "Designing a lightweight browser extension to convert web pages and selected content into clean Markdown.",
+    preview:
+      "Designing a lightweight browser extension to convert web pages and selected content into clean Markdown.",
     tags: ["JavaScript", "Browser Extension", "Markdown", "Web Parsing"],
     content: webToMarkdownContent,
   },

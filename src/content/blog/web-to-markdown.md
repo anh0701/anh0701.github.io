@@ -1,4 +1,3 @@
-
 > Designing a lightweight browser extension that converts web pages into clean, reusable Markdown.
 
 ## 1. Motivation
@@ -74,7 +73,6 @@ should become something like:
     ```text
     npm install example-package
     ```
-
 ````
 
 The converter therefore needs to understand the structure of the HTML rather than simply replacing strings.
@@ -93,7 +91,7 @@ Main content
 Sidebar
 Related content
 Footer
-````
+```
 
 The extension should still be able to process the page instead of depending on one specific website's HTML structure.
 
@@ -115,14 +113,14 @@ If the user highlights a specific part of the page, only that selection should b
 
 Common structures should be represented appropriately in Markdown:
 
-* Headings
-* Paragraphs
-* Links
-* Lists
-* Inline code
-* Code blocks
-* Tables
-* Text formatting
+- Headings
+- Paragraphs
+- Links
+- Lists
+- Inline code
+- Code blocks
+- Tables
+- Text formatting
 
 ### d. Copy the result
 
@@ -252,8 +250,8 @@ Consider:
 
 ```html
 <p>
-    Hello <strong>world</strong>
-    <a href="/docs">documentation</a>
+  Hello <strong>world</strong>
+  <a href="/docs">documentation</a>
 </p>
 ```
 
@@ -358,14 +356,14 @@ Consider:
 
 ```html
 <div>
-    <h2>Products</h2>
+  <h2>Products</h2>
 
-    <p>Available products:</p>
+  <p>Available products:</p>
 
-    <ul>
-        <li>Product A</li>
-        <li>Product B</li>
-    </ul>
+  <ul>
+    <li>Product A</li>
+    <li>Product B</li>
+  </ul>
 </div>
 ```
 
@@ -435,8 +433,8 @@ For example:
 
 ```html
 <nav>
-    <a href="/home">Home</a>
-    <a href="/jobs">Jobs</a>
+  <a href="/home">Home</a>
+  <a href="/jobs">Jobs</a>
 </nav>
 ```
 
@@ -496,9 +494,7 @@ Text nodes are handled separately.
 For example:
 
 ```html
-<p>
-    Hello <strong>world</strong>
-</p>
+<p>Hello <strong>world</strong></p>
 ```
 
 contains:
@@ -542,9 +538,7 @@ Links are another example where simply extracting text is not enough.
 Given:
 
 ```html
-<a href="https://example.com">
-    Example
-</a>
+<a href="https://example.com"> Example </a>
 ```
 
 the converter should preserve both the visible text and the destination:
@@ -625,10 +619,10 @@ TABLE
 Markdown requires:
 
 ```md
-| Name | Description |
-| --- | --- |
-| Java | Backend |
-| JavaScript | Frontend |
+| Name       | Description |
+| ---------- | ----------- |
+| Java       | Backend     |
+| JavaScript | Frontend    |
 ```
 
 Therefore, table conversion needs its own processing logic.
@@ -843,12 +837,12 @@ The important reason was not simply avoiding dependencies.
 
 It was that the project itself was an opportunity to understand:
 
-* DOM traversal
-* HTML semantics
-* Recursive processing
-* Browser extension architecture
-* Message passing
-* Structured data transformation
+- DOM traversal
+- HTML semantics
+- Recursive processing
+- Browser extension architecture
+- Message passing
+- Structured data transformation
 
 The extension therefore became more than a simple utility.
 

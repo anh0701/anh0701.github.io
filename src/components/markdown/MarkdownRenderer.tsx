@@ -5,9 +5,7 @@ import Slideshow from "../ui/Slideshow";
 import { FaYoutube } from "react-icons/fa";
 
 function getYoutubeVideoId(url: string) {
-  const match = url.match(
-    /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?/]+)/
-  );
+  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?/]+)/);
 
   return match?.[1] ?? null;
 }
@@ -89,9 +87,7 @@ function CodeBlock({
   );
 }
 
-export default function MarkdownRenderer({
-  content,
-}: MarkdownRendererProps) {
+export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
     <div
       className="
@@ -259,10 +255,7 @@ export default function MarkdownRenderer({
 
             // Code block
             return (
-              <CodeBlock
-                className={className}
-                {...props}
-              >
+              <CodeBlock className={className} {...props}>
                 {children}
               </CodeBlock>
             );

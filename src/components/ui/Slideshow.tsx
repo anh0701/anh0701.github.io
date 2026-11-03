@@ -16,9 +16,7 @@ export default function Slideshow({ images }: Props) {
   };
 
   const previous = () => {
-    setIndex((current) =>
-      current === 0 ? images.length - 1 : current - 1
-    );
+    setIndex((current) => (current === 0 ? images.length - 1 : current - 1));
   };
 
   useEffect(() => {

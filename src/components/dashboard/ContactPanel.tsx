@@ -20,7 +20,6 @@ export default function ContactPanel() {
       </div>
       <Panel className="p-5 sm:p-6 lg:p-10">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1fr]">
-
           {/* LEFT */}
           <div>
             {/* <p className="text-xs sm:text-sm text-zinc-500">Contact</p> */}
@@ -74,11 +73,13 @@ export default function ContactPanel() {
                 >
                   {/* LEFT SIDE */}
                   <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-                    <div className="flex h-10 w-10
+                    <div
+                      className="flex h-10 w-10
                       items-center justify-center
                       rounded-xl
                       bg-white/[0.03]
-                      text-base">
+                      text-base"
+                    >
                       <Icon />
                     </div>
 

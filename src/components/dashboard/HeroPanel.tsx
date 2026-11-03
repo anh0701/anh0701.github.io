@@ -38,9 +38,13 @@ export default function HeroPanel() {
               text-zinc-400
             "
           >
-            Backend Developer with solid experience in building enterprise applications and RESTful APIs using Java and Spring Boot.
-            Passionate about technology, I actively explore new tools and concepts such as Python and Computer Vision through personal side projects.
-            Fast learner with a growth mindset, I am eager to adapt to new technologies, tackle diverse challenges, and contribute effectively to the team’s success.
+            Backend Developer with solid experience in building enterprise
+            applications and RESTful APIs using Java and Spring Boot. Passionate
+            about technology, I actively explore new tools and concepts such as
+            Python and Computer Vision through personal side projects. Fast
+            learner with a growth mindset, I am eager to adapt to new
+            technologies, tackle diverse challenges, and contribute effectively
+            to the team’s success.
           </p>
         </div>
       </div>
@@ -60,9 +64,7 @@ export default function HeroPanel() {
         <div className="p-5 font-mono text-xs text-zinc-300 space-y-4">
           <div>
             <span className="text-zinc-500">$ focus</span>
-            <p className="mt-1 text-zinc-200">
-              Backend Software Engineer
-            </p>
+            <p className="mt-1 text-zinc-200">Backend Software Engineer</p>
           </div>
 
           <div>

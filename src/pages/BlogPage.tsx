@@ -44,9 +44,7 @@ export default function BlogPage({ standalone = false }: Props) {
           {blogs.map((blog) => (
             <Link key={blog.slug} to={`/blog/${blog.slug}`}>
               <Panel className="p-6 md:p-7">
-                <p className="mt-3 text-sm text-zinc-500">
-                  {blog.date}
-                </p>
+                <p className="mt-3 text-sm text-zinc-500">{blog.date}</p>
 
                 <h2
                   className="
