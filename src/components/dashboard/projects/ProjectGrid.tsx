@@ -163,6 +163,7 @@ export default function ProjectGrid() {
                 <button
                   onClick={() => setSelectedProject(project)}
                   className="
+                  cursor-pointer
                     inline-flex items-center gap-2
                     text-sm font-medium text-blue-400
                     transition-colors hover:text-blue-300
@@ -187,6 +188,7 @@ export default function ProjectGrid() {
               )
             }
             className="
+            cursor-pointer
               inline-flex items-center gap-2
               rounded-xl
               border border-blue-500/30

@@ -141,7 +141,7 @@ export default function ProjectDetailModal({
               type="button"
               onClick={onClose}
               aria-label="Close project details"
-              className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-lg border border-[#252e40] bg-[#151c2b] text-slate-400 transition-all hover:border-[#31534f] hover:bg-[#172c2c] hover:text-[#00d2a8] sm:right-6 sm:top-6"
+              className="cursor-pointer absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-lg border border-[#252e40] bg-[#151c2b] text-slate-400 transition-all hover:border-[#31534f] hover:bg-[#172c2c] hover:text-[#00d2a8] sm:right-6 sm:top-6"
             >
               <FiX size={19} />
             </button>
